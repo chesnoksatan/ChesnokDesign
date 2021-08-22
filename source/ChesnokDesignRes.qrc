@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/ChesnokDesign">
+        <file alias="Theme.qml">ChesnokDesign/Theme.qml</file>
+    </qresource>
+</RCC>
