@@ -5,24 +5,30 @@ import QtQml 2.12
 
 import ApplicationTheme 1.0
 
+import "./Styles"
+
 Item {
     id: styleObject
 
     Component.onCompleted: {
         setTheme(ThemeMode.Light)
-        setAccentColor(MainColor.GreenShade)
+        setAccentColor(MainColor.BlueShade)
     }
 
     property var currentTheme
 
-    property color backgroundColor: basic[0]
+    property color backgroundColor: currentTheme === ThemeMode.Light ? basic[0] : basic[9999]
     property color accentBackgroundColor: accent[1000]
-    property color alternativeBackgroundColor: basic[200]
+    property color alternativeBackgroundColor: currentTheme === ThemeMode.Light ? basic[200] : basic[1500]
 
     property var accent
     readonly property var basic: basicColors.basic
+    readonly property color transparent: "Transparent"
 
-    QtObject {
+    property var buttonStyle: ButtonStyle { }
+
+    QtObject
+    {
         id: basicColors
 
         readonly property var basic:
@@ -49,7 +55,8 @@ Item {
         }
     }
 
-    QtObject {
+    QtObject
+    {
         id: accentColors
 
         readonly property var __BlueColors:
@@ -137,18 +144,12 @@ Item {
         }
     }
 
-    function setTheme(theme)
+    function setTheme( theme )
     {
-        switch(theme)
-        {
-            case ThemeMode.Light: break;
-            case ThemeMode.Dark: break;
-        }
-
         currentTheme = theme
     }
 
-    function setAccentColor(accent)
+    function setAccentColor( accent )
     {
         switch(accent)
         {

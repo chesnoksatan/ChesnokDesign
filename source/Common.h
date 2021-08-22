@@ -1,6 +1,9 @@
 #pragma once
 
+#include <QColor>
 #include <QObject>
+
+namespace ApplicationTheme {
 
 class Theme
 {
@@ -35,3 +38,45 @@ public:
 private:
     explicit ColorShade() { }
 };
+
+} // namespace ApplicationTheme
+
+namespace ButtonStyle {
+
+class ButtonColorStyle
+{
+    Q_GADGET
+public:
+    enum Value
+    {
+        Base,
+        Base2,
+        Primary,
+        Secondary
+    };
+    Q_ENUM( Value )
+
+private:
+    explicit ButtonColorStyle() { }
+};
+
+class ButtonSize
+{
+    Q_GADGET
+public:
+    enum Value
+    {
+        H24,
+        H32,
+        H38,
+        H40,
+        H46,
+        H48
+    };
+    Q_ENUM( Value )
+
+private:
+    explicit ButtonSize() { }
+};
+
+} // namespace ButtonStyle

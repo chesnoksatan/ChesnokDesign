@@ -1,5 +1,7 @@
 <RCC>
     <qresource prefix="/ChesnokDesign">
         <file alias="Theme.qml">ChesnokDesign/Theme.qml</file>
+        <file alias="Styles/ButtonStyle.qml">ChesnokDesign/Styles/ButtonStyle.qml</file>
+        <file alias="Base/Button.qml">ChesnokDesign/Base/Button.qml</file>
     </qresource>
 </RCC>
