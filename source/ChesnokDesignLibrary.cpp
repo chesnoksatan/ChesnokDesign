@@ -34,5 +34,7 @@ void ChesnokDesignLibrary::initialize( QQmlEngine *engine, const char *uri )
 
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/Neumorphic/NeumorphicButton.qml" ), uri, 1, 0, "NeumorphicButton" );
 
+    qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/SideBar.qml" ), uri, 1, 0, "SideBar" );
+
     // clang-format on
 }

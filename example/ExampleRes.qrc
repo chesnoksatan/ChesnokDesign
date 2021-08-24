@@ -1,5 +1,12 @@
 <RCC>
     <qresource prefix="/Example">
+    
         <file>main.qml</file>
+        
+        <file>Group.svg</file>
+        <file>Help.svg</file>
+        <file>Mountain.svg</file>
+        <file>Settings.svg</file>
+        
     </qresource>
 </RCC>

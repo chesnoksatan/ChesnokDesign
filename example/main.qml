@@ -28,14 +28,24 @@ Window {
 
     color: Theme.neumorphicBackgroundColor
 
-    Switch {
-        onCheckedChanged: Theme.setTheme( !checked ? ThemeMode.Light : ThemeMode.Dark)
-    }
+//    Switch {
+//        onCheckedChanged: Theme.setTheme( !checked ? ThemeMode.Light : ThemeMode.Dark)
+//    }
 
-    ComboBox {
-        model: [ "BlueShade", "GreenShade", "YellowShade", "OrangeShade", "RedShade", "PurpleShade"]
-        onCurrentIndexChanged: Theme.setAccentColor(currentIndex)
-        y: 40
+//    ComboBox {
+//        model: [ "BlueShade", "GreenShade", "YellowShade", "OrangeShade", "RedShade", "PurpleShade"]
+//        onCurrentIndexChanged: Theme.setAccentColor(currentIndex)
+//        y: 40
+//    }
+
+    SideBar {
+        anchors.top: parent.top
+        anchors.bottom: parent.bottom
+        model: [    {name: "Group", iconSource: "qrc:/Example/Group.svg"},
+                    {name: "Mountain", iconSource: "qrc:/Example/Mountain.svg"},
+                    {name: "Help", iconSource: "qrc:/Example/Help.svg"},
+                    {name: "Settings", iconSource: "qrc:/Example/Settings.svg"}
+        ]
     }
 
     RowLayout {
