@@ -18,14 +18,66 @@ Item {
     property var currentTheme
 
     property color backgroundColor: currentTheme === ThemeMode.Light ? basic[0] : basic[9999]
+    property color neumorphicBackgroundColor: currentTheme === ThemeMode.Light ? neumorphicGrayScale[200] : neumorphicGrayScale[700]
     property color accentBackgroundColor: accent[1000]
-    property color alternativeBackgroundColor: currentTheme === ThemeMode.Light ? basic[200] : basic[1500]
+    property color alternativeBackgroundColor: currentTheme === ThemeMode.Light ? basic[400] : basic[1400]
 
     property var accent
     readonly property var basic: basicColors.basic
+    readonly property var neumorphicGrayScale: neumorphic.grayScale
     readonly property color transparent: "Transparent"
 
-    property var buttonStyle: ButtonStyle { }
+    property var buttonStyle: ButtonStyle {}
+    property var neumorphicButtonStyle: NeumorphicButtonStyle {}
+
+    QtObject
+    {
+        id: neumorphic
+
+        readonly property var grayScale:
+        {
+            100: "#F3F4F8",
+            200: "#D2D4DA",
+            300: "#B3B5BD",
+            400: "#9496A1",
+            500: "#777986",
+            600: "#5B5D6B",
+            700: "#4E505F",
+            800: "#404252",
+            900: "#282A3A",
+            1000: "#1C1E2F",
+            1100: "#161829",
+            1200: "#101223",
+            1300: "#0F1020",
+            1400: "#0E0F1D",
+            1500: "#0D0E1A"
+        }
+    }
+
+    QtObject
+    {
+        id: shadowRadius
+
+        readonly property int outerShadowRadius: 15
+        readonly property int innerShadowRadius: 30
+    }
+
+    QtObject
+    {
+        id: shadowSamples
+
+        readonly property int outerShadowSamples: 17
+        readonly property int innerShadowSamples: 30
+    }
+
+    QtObject
+    {
+        id: shadowOffset
+
+        readonly property int normalShadowOffset: 3
+        readonly property int pressedShadowOffset: 8
+        readonly property int hoveredShadowOffset: 6
+    }
 
     QtObject
     {

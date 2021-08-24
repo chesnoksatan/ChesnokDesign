@@ -16,7 +16,7 @@ Item {
         {
             "base":      Theme.transparent,
             "base2":     Theme.transparent,
-            "primary":   Theme.accent[200],
+            "primary":   Theme.accent[300],
             "secondary": Theme.basic[200]
         }
 
@@ -77,7 +77,7 @@ Item {
         {
             "base":      Theme.transparent,
             "base2":     Theme.transparent,
-            "primary":   Theme.accent[200],
+            "primary":   Theme.accent[300],
             "secondary": Theme.basic[1200]
         }
 

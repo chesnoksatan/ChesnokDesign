@@ -79,4 +79,19 @@ private:
     explicit ButtonSize() { }
 };
 
+class NeumorphicButtonStyle
+{
+    Q_GADGET
+public:
+    enum Value
+    {
+        Inner,
+        Outer
+    };
+    Q_ENUM( Value )
+
+private:
+    explicit NeumorphicButtonStyle() { }
+};
+
 } // namespace ButtonStyle

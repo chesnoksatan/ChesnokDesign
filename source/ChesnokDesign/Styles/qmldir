@@ -1,3 +1,4 @@
 module ChesnokDesign
 
 ButtonStyle 1.0 ButtonStyle.qml
+NeumorphicButtonStyle 1.0 NeumorphicButtonStyle.qml

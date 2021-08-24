@@ -1,7 +1,12 @@
 <RCC>
     <qresource prefix="/ChesnokDesign">
         <file alias="Theme.qml">ChesnokDesign/Theme.qml</file>
+        
         <file alias="Styles/ButtonStyle.qml">ChesnokDesign/Styles/ButtonStyle.qml</file>
+        <file alias="Styles/NeumorphicButtonStyle.qml">ChesnokDesign/Styles/NeumorphicButtonStyle.qml</file>
+        
         <file alias="Base/Button.qml">ChesnokDesign/Base/Button.qml</file>
+        
+        <file alias="Custom/Neumorphic/NeumorphicButton.qml">ChesnokDesign/Custom/Neumorphic/NeumorphicButton.qml</file>
     </qresource>
 </RCC>

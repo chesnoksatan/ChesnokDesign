@@ -26,9 +26,13 @@ void ChesnokDesignLibrary::initialize( QQmlEngine *engine, const char *uri )
     qmlRegisterUncreatableType<ButtonStyle::ButtonColorStyle>( "ButtonStyle", 1, 0, "ButtonColorStyle", "It's enum class" );
     qmlRegisterUncreatableType<ButtonStyle::ButtonSize>( "ButtonStyle", 1, 0, "ButtonSize", "It's enum class" );
 
+    qmlRegisterUncreatableType<ButtonStyle::NeumorphicButtonStyle>( "NeumorphicStyle", 1, 0, "NeumorphicButtonStyle", "It's enum class" );
+
     qmlRegisterSingletonType( QUrl( "qrc:/ChesnokDesign/Theme.qml" ), uri, 1, 0, "Theme" );
 
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Base/Button.qml" ), uri, 1, 0, "Button" );
+
+    qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/Neumorphic/NeumorphicButton.qml" ), uri, 1, 0, "NeumorphicButton" );
 
     // clang-format on
 }
