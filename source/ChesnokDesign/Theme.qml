@@ -56,31 +56,6 @@ Item {
 
     QtObject
     {
-        id: shadowRadius
-
-        readonly property int outerShadowRadius: 15
-        readonly property int innerShadowRadius: 30
-    }
-
-    QtObject
-    {
-        id: shadowSamples
-
-        readonly property int outerShadowSamples: 17
-        readonly property int innerShadowSamples: 30
-    }
-
-    QtObject
-    {
-        id: shadowOffset
-
-        readonly property int normalShadowOffset: 3
-        readonly property int pressedShadowOffset: 8
-        readonly property int hoveredShadowOffset: 6
-    }
-
-    QtObject
-    {
         id: basicColors
 
         readonly property var basic:

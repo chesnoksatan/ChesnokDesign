@@ -66,14 +66,15 @@ Item {
         anchors.fill: parent
     }
 
-    // TODO: buttonIcon
-    Button {
+    ButtonIcon {
         id: controlButton
-        // @disable-check M16
-        style: ButtonColorStyle.Primary
+        style: ButtonColorStyle.Base
+        size: root.size
         width: height
         height: Theme.buttonStyle.getHeight( root.size )
         onClicked: toggleState()
+        icon.group: "menu"
+        icon.name: "hamburger"
 
         anchors {
             top: root.top

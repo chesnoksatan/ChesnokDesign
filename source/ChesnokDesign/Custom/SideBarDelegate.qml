@@ -16,25 +16,20 @@ Rectangle {
     signal select()
 
     property bool expanded: delegate.width > 100
-    property string iconSource: modelData.iconSource
     property string name: modelData.name
 
-    Image {
+    Icon {
         id: icon
 
         anchors.verticalCenter: parent.verticalCenter
         anchors.left: delegate.left
         anchors.leftMargin: 4
 
-        source: delegate.iconSource ? delegate.iconSource : ""
+        source: modelData.iconSource ? modelData.iconSource : ""
+        group: modelData.iconGroup ? modelData.iconGroup : ""
+        name: modelData.iconName ? modelData.iconName : ""
 
-        width: delegate.height - 8
-        height: delegate.height - 8
-
-        sourceSize {
-            width: icon.width
-            height: icon.height
-        }
+        size: delegate.height - 8
     }
 
     Label {
@@ -51,7 +46,7 @@ Rectangle {
         font.weight: Font.DemiBold
     }
 
-    color: selected ? Theme.accent[200] : "Transparent"
+    color: selected ? Theme.accent[600] : "Transparent"
     radius: 5
 
     Behavior on color { ColorAnimation { duration: 200 } }

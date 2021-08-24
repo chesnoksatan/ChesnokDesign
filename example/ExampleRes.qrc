@@ -3,10 +3,8 @@
     
         <file>main.qml</file>
         
-        <file>Group.svg</file>
-        <file>Help.svg</file>
-        <file>Mountain.svg</file>
-        <file>Settings.svg</file>
+        <file>Pages/Buttons.qml</file>
+        <file>Pages/Icons.qml</file>
         
     </qresource>
 </RCC>

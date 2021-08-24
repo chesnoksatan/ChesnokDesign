@@ -28,72 +28,40 @@ Window {
 
     color: Theme.neumorphicBackgroundColor
 
-//    Switch {
-//        onCheckedChanged: Theme.setTheme( !checked ? ThemeMode.Light : ThemeMode.Dark)
-//    }
-
-//    ComboBox {
-//        model: [ "BlueShade", "GreenShade", "YellowShade", "OrangeShade", "RedShade", "PurpleShade"]
-//        onCurrentIndexChanged: Theme.setAccentColor(currentIndex)
-//        y: 40
-//    }
-
-    SideBar {
-        anchors.top: parent.top
-        anchors.bottom: parent.bottom
-        model: [    {name: "Group", iconSource: "qrc:/Example/Group.svg"},
-                    {name: "Mountain", iconSource: "qrc:/Example/Mountain.svg"},
-                    {name: "Help", iconSource: "qrc:/Example/Help.svg"},
-                    {name: "Settings", iconSource: "qrc:/Example/Settings.svg"}
-        ]
-    }
-
-    RowLayout {
+    ColumnLayout {
         anchors.centerIn: parent
-        spacing: 40
-        Repeater {
-            model: [{type: ButtonColorStyle.Base, name: "Base button"},
-                    {type: ButtonColorStyle.Base2, name: "Base2 button"},
-                    {type: ButtonColorStyle.Primary, name: "Primary button"},
-                    {type: ButtonColorStyle.Secondary, name: "Secondary button"}]
 
-            ColumnLayout {
-                spacing: 16
-                Repeater {
-                    id: rep
-                    property var buttonType: modelData
-                    model: [ButtonSize.H24, ButtonSize.H32, ButtonSize.H38, ButtonSize.H40, ButtonSize.H46, ButtonSize.H48]
-                    Button {
-                        Layout.preferredWidth: 170
-                        text: rep.buttonType.name
-                        style: rep.buttonType.type
-                        size: modelData
-                        enabled: index !== 5
-                        rounded: index === 2
-                    }
-                }
-            }
+        Switch {
+            onCheckedChanged: Theme.setTheme( !checked ? ThemeMode.Light : ThemeMode.Dark)
         }
 
-        Repeater {
-            model: [{type: NeumorphicButtonStyle.Inner, name: "Inner button"},
-                    {type: NeumorphicButtonStyle.Outer, name: "Outer button"}]
+        ComboBox {
+            model: [ "BlueShade", "GreenShade", "YellowShade", "OrangeShade", "RedShade", "PurpleShade"]
+            onCurrentIndexChanged: Theme.setAccentColor(currentIndex)
+            y: 40
+        }
+    }
 
-            ColumnLayout {
-                spacing: 16
-                Repeater {
-                    id: rep2
-                    property var buttonType: modelData
-                    model: [ButtonSize.H24, ButtonSize.H32, ButtonSize.H38, ButtonSize.H40, ButtonSize.H46, ButtonSize.H48]
-                    NeumorphicButton {
-                        Layout.preferredWidth: 170
-                        text: rep2.buttonType.name
-                        style: rep2.buttonType.type
-                        size: modelData
-                        enabled: index !== 5
-                    }
-                }
-            }
+    SideBar {
+        id: navigation
+        anchors.top: parent.top
+        anchors.bottom: parent.bottom
+        model: [    {name: "Icons", iconGroup: "file", iconName: "file_svg", url: "qrc:/Example/Pages/Icons.qml"},
+                    {name: "Buttons", iconGroup: "media", iconName: "airplay", url: "qrc:/Example/Pages/Buttons.qml"},
+        ]
+
+        onCurrentIndexChanged: {
+            loader.source = model[currentIndex].url
+        }
+    }
+
+    Loader {
+        id: loader
+        anchors {
+            left: navigation.right
+            top: parent.top
+            right: parent.right
+            bottom: parent.bottom
         }
     }
 }

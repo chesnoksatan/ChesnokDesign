@@ -67,6 +67,14 @@ Item {
             "primary":   Theme.basic[0],
             "secondary": Theme.accent[600]
         }
+
+        readonly property var iconColor:
+        {
+            "base":      Theme.basic[0],
+            "base2":     Theme.accent[600],
+            "primary":   Theme.basic[1500],
+            "secondary": Theme.accent[600]
+        }
     }
 
     QtObject
@@ -126,6 +134,14 @@ Item {
             "base":      Theme.basic[0],
             "base2":     Theme.accent[600],
             "primary":   Theme.basic[1500],
+            "secondary": Theme.accent[600]
+        }
+
+        readonly property var iconColor:
+        {
+            "base":      Theme.basic[1500],
+            "base2":     Theme.accent[600],
+            "primary":   Theme.basic[0],
             "secondary": Theme.accent[600]
         }
     }
@@ -415,6 +431,35 @@ Item {
                     case ButtonColorStyle.Base2: return darkTheme.textColor["base2"]
                     case ButtonColorStyle.Primary: return darkTheme.textColor["primary"]
                     case ButtonColorStyle.Secondary: return darkTheme.textColor["secondary"]
+                }
+                break
+            }
+        }
+    }
+
+    function getIconColor( style )
+    {
+        switch ( Theme.currentTheme )
+        {
+            case ThemeMode.Light:
+            {
+                switch ( style )
+                {
+                    case ButtonColorStyle.Base: return lightTheme.iconColor["base"]
+                    case ButtonColorStyle.Base2: return lightTheme.iconColor["base2"]
+                    case ButtonColorStyle.Primary: return lightTheme.iconColor["primary"]
+                    case ButtonColorStyle.Secondary: return lightTheme.iconColor["secondary"]
+                }
+                break
+            }
+            case ThemeMode.Dark:
+            {
+                switch ( style )
+                {
+                    case ButtonColorStyle.Base: return darkTheme.iconColor["base"]
+                    case ButtonColorStyle.Base2: return darkTheme.iconColor["base2"]
+                    case ButtonColorStyle.Primary: return darkTheme.iconColor["primary"]
+                    case ButtonColorStyle.Secondary: return darkTheme.iconColor["secondary"]
                 }
                 break
             }

@@ -2,3 +2,5 @@ module ChesnokDesign
 
 SideBar 1.0 SideBar.qml
 SideBarDelegate 1.0 SideBarDelegate.qml
+ButtonIcon 1.0 ButtonIcon.qml
+Icon 1.0 Icon.qml
