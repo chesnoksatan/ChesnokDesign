@@ -1,10 +1,8 @@
 import QtQuick 2.12
 import QtQml 2.12
 
-import ButtonStyle 1.0
-import NeumorphicStyle 1.0
-import ApplicationTheme 1.0
 import ChesnokDesign 1.0
+import ApplicationTheme 1.0
 
 Item {
     id: buttonStyle

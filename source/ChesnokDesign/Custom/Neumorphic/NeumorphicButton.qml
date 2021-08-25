@@ -4,9 +4,7 @@ import QtQuick.Controls 2.12  as Controls
 import QtGraphicalEffects 1.12
 import QtQuick.Templates 2.12 as T
 
-import NeumorphicStyle 1.0
 import ChesnokDesign 1.0
-import ButtonStyle 1.0
 
 Item {
     id: root
@@ -74,6 +72,9 @@ Item {
                 radius: Theme.neumorphicButtonStyle.getShadowRadius( root.style )
                 color: "#35373E"
                 visible: root.style === NeumorphicButtonStyle.Inner && root.enabled
+
+                Behavior on horizontalOffset { PropertyAnimation { duration: 100 } }
+                Behavior on verticalOffset { PropertyAnimation { duration: 100 } }
             }
         }
     }
@@ -114,8 +115,6 @@ Item {
         Behavior on verticalOffset { PropertyAnimation { duration: 100 } }
     }
 
-
-
     InnerShadow {
         anchors.fill: control
         source: control
@@ -129,5 +128,8 @@ Item {
         radius: Theme.neumorphicButtonStyle.getShadowRadius( root.style )
         color: "#AAFAFBFF"
         visible: root.style === NeumorphicButtonStyle.Inner && root.enabled
+
+        Behavior on horizontalOffset { PropertyAnimation { duration: 100 } }
+        Behavior on verticalOffset { PropertyAnimation { duration: 100 } }
     }
 }

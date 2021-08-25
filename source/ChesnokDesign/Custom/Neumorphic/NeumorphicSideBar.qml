@@ -19,7 +19,8 @@ Item {
     state: "abbreviated"
     z: 2
 
-    property Component delegate: SideBarDelegate {
+    property Component delegate: NeumorphicSideBarDelegate {
+        width: parent.width
         height: Theme.buttonStyle.getHeight( root.size )
         selected: index === root.currentIndex
         onSelect: {
@@ -56,12 +57,20 @@ Item {
     property Component backgroundDelegate: Rectangle {
         width: parent.width
         height: parent.height
-        color: Theme.accentBackgroundColor
+        color: Theme.neumorphicBackgroundColor
     }
 
     Loader {
         sourceComponent: root.backgroundDelegate
         anchors.fill: parent
+
+        layer.enabled: true
+        layer.effect: DropShadow {
+            horizontalOffset: Theme.neumorphicButtonStyle.getNormalShadowOffset()
+            samples: Theme.neumorphicButtonStyle.getShadowSamples( NeumorphicButtonStyle.Inner )
+            radius: Theme.neumorphicButtonStyle.getShadowRadius( NeumorphicButtonStyle.Inner )
+            color: "#252725"
+        }
     }
 
     ButtonIcon {
@@ -109,7 +118,7 @@ Item {
             margins: 8
         }
         height: 1
-        color: Utils.getAlphaColor( Theme.basic[500], 0.5 )
+        color: Utils.getAlphaColor( Theme.neumorphicGrayScale[500], 0.5 )
     }
 
     function expanded() { return root.state === "expanded" }

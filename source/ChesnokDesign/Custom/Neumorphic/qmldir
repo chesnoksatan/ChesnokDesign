@@ -1,3 +1,5 @@
 module ChesnokDesign
 
 NeumorphicButton 1.0 NeumorphicButton.qml
+NeumorphicSideBar 1.0 NeumorphicSideBar.qml
+NeumorphicSideBarDelegate 1.0 NeumorphicSideBarDelegate.qml

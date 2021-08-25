@@ -3,9 +3,9 @@ pragma Singleton
 import QtQuick 2.12
 import QtQml 2.12
 
-import ApplicationTheme 1.0
-
 import "./Styles"
+
+import ApplicationTheme 1.0
 
 Item {
     id: styleObject

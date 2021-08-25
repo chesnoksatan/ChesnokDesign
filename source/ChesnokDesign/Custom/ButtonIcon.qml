@@ -2,7 +2,6 @@ import QtQuick 2.8
 import QtGraphicalEffects 1.0
 
 import ChesnokDesign 1.0
-import ButtonStyle 1.0
 
 Button {
     id: control

@@ -3,8 +3,6 @@ import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.4
 
 import ChesnokDesign 1.0
-import ButtonStyle 1.0
-import NeumorphicStyle 1.0
 
 Page {
     background: Rectangle {

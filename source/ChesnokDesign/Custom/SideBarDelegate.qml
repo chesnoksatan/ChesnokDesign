@@ -2,9 +2,7 @@ import QtQuick 2.12
 import QtQml 2.12
 import QtQuick.Controls 2.12
 
-import NeumorphicStyle 1.0
 import ChesnokDesign 1.0
-import ButtonStyle 1.0
 
 Rectangle {
     id: delegate

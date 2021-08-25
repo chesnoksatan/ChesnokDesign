@@ -3,7 +3,6 @@ import QtQuick.Controls 2.12 as Controls
 import QtQuick.Templates 2.1 as T
 
 import ChesnokDesign 1.0
-import ButtonStyle 1.0
 
 // @disable-check M129
 T.Button {

@@ -1,7 +1,6 @@
 import QtQuick 2.12
 import QtQml 2.12
 
-import ButtonStyle 1.0
 import ChesnokDesign 1.0
 import ApplicationTheme 1.0
 
@@ -132,9 +131,9 @@ Item {
         readonly property var textColor:
         {
             "base":      Theme.basic[0],
-            "base2":     Theme.accent[600],
+            "base2":     Theme.accent[400],
             "primary":   Theme.basic[1500],
-            "secondary": Theme.accent[600]
+            "secondary": Theme.accent[500]
         }
 
         readonly property var iconColor:
