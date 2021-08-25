@@ -40,7 +40,7 @@ Window {
         }
     }
 
-    SideBar {
+    NeumorphicSideBar {
         id: navigation
         anchors.top: parent.top
         anchors.bottom: parent.bottom

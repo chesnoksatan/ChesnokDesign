@@ -43,16 +43,16 @@ Item {
     {
         id: shadowRadius
 
-        readonly property int outerShadowRadius: 15
-        readonly property int innerShadowRadius: 30
+        readonly property int outerShadowRadius: 10
+        readonly property int innerShadowRadius: 10
     }
 
     QtObject
     {
         id: shadowSamples
 
-        readonly property int outerShadowSamples: 30
-        readonly property int innerShadowSamples: 30
+        readonly property int outerShadowSamples: 20
+        readonly property int innerShadowSamples: 20
     }
 
     QtObject

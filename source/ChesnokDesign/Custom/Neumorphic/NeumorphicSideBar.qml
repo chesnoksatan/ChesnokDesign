@@ -68,7 +68,7 @@ Item {
         layer.effect: DropShadow {
             horizontalOffset: Theme.neumorphicButtonStyle.getNormalShadowOffset()
             samples: Theme.neumorphicButtonStyle.getShadowSamples( NeumorphicButtonStyle.Inner )
-            radius: Theme.neumorphicButtonStyle.getShadowRadius( NeumorphicButtonStyle.Inner )
+            radius: Theme.neumorphicButtonStyle.getShadowRadius( NeumorphicButtonStyle.Inner ) + 5
             color: "#252725"
         }
     }

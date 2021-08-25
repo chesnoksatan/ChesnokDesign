@@ -30,6 +30,8 @@ Item {
                 if(mouseArea.containsMouse) return Theme.neumorphicButtonStyle.getHoverBackgroundColor()
                 return Theme.neumorphicButtonStyle.getNormalBackgroundColor()
             }
+            border.width: Theme.neumorphicButtonStyle.getBorderWidth(false)
+            border.color: Theme.neumorphicButtonStyle.getBorderColor(false)
 
             layer.enabled: delegate.selected
             layer.effect: InnerShadow {
