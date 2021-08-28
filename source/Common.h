@@ -95,3 +95,20 @@ private:
 };
 
 } // namespace ButtonStyle
+
+class NotificationType
+{
+    Q_GADGET
+public:
+    enum Value
+    {
+        Fail,
+        Success,
+        Question,
+        Warning
+    };
+    Q_ENUM( Value )
+
+private:
+    explicit NotificationType() { }
+};

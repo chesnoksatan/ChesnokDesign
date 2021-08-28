@@ -16,13 +16,15 @@ Page {
     Flickable{
         anchors.fill: parent
         anchors.leftMargin: 8
-        contentHeight: column.height
-        contentWidth: column.width
+        contentHeight: flow.height
+        contentWidth: flow.width
         boundsBehavior: Flickable.StopAtBounds
         ScrollBar.vertical: ScrollBar{}
+        ScrollBar.horizontal: ScrollBar{}
 
-        Column {
-            id: column
+        Flow {
+            id: flow
+            width: page.width
 
             Repeater {
                 model: [
@@ -37,6 +39,7 @@ Page {
                     property var groupName: modelData
 
                     width: 400
+                    height: 400
 
                     GridLayout {
                         anchors.fill: parent
@@ -62,6 +65,46 @@ Page {
                                     text: iconName
                                     visible: area.containsMouse
                                 }
+                            }
+                        }
+                    }
+                }
+            }
+
+            GroupBox {
+                title:  "Custom Notifications"
+
+                width: 500 * 2
+                height: 250 * 2
+
+                GridLayout {
+                    anchors.fill: parent
+
+                    columns: 2
+
+                    Repeater {
+                        model: FileListModel {
+                            scanDir: ":/Icons/ChesnokDesign/Icons/special/"
+                        }
+                        Image {
+                            width: 438
+                            height: 174
+
+                            sourceSize {
+                                  width: 438
+                                  height: 174
+                            }
+
+                            source: "qrc:/Icons/ChesnokDesign/Icons/special/" + iconName + ".svg"
+
+                            MouseArea{
+                                id: area2
+                                anchors.fill: parent
+                                hoverEnabled: true
+                            }
+                            ToolTip {
+                                text: iconName
+                                visible: area2.containsMouse
                             }
                         }
                     }

@@ -50,4 +50,11 @@ Window {
             bottom: parent.bottom
         }
     }
+
+    Component.onCompleted: {
+        navigation.currentIndex = 2
+
+//        var comnponent = Qt.createComponent('qrc:/ChesnokDesign/Custom/Notification.qml');
+//        var object = comnponent.createObject(window, { 'title': "", 'message': ""});
+    }
 }

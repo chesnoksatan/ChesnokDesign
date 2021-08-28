@@ -1,9 +1,11 @@
 #include "FileListModel.h"
 
 #include <ChesnokDesignLibrary.h>
+#include <Common.h>
 
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
+#include <QQmlComponent>
 #include <QQmlContext>
 #include <QSettings>
 
@@ -30,6 +32,13 @@ int main( int argc, char *argv[] )
         Qt::QueuedConnection );
 
     engine.load( url );
+
+    QQmlComponent component( &engine, QUrl( "qrc:/ChesnokDesign/Custom/Notification.qml" ) );
+    QObject *notification = component.create();
+
+    notification->setProperty( "title", "Don't worry" );
+    notification->setProperty( "description", "Just enjoy" );
+    notification->setProperty( "type", NotificationType::Fail );
 
     return app.exec();
 }
