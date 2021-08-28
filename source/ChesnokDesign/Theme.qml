@@ -17,8 +17,9 @@ Item {
 
     property var currentTheme
 
-    property color backgroundColor: currentTheme === ThemeMode.Light ? basic[0] : basic[9999]
+    property color backgroundColor: currentTheme === ThemeMode.Light ? basic[0] : basic[1500]
     property color neumorphicBackgroundColor: currentTheme === ThemeMode.Light ? neumorphicGrayScale[200] : neumorphicGrayScale[700]
+    property color neumorphicReverseBackgroundColor: currentTheme === ThemeMode.Light ? neumorphicGrayScale[700] : neumorphicGrayScale[200]
     property color accentBackgroundColor: accent[1000]
     property color alternativeBackgroundColor: currentTheme === ThemeMode.Light ? basic[400] : basic[1400]
 

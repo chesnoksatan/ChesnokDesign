@@ -12,6 +12,7 @@ Item {
     property int size
     property alias text: control.text
     property int style: NeumorphicButtonStyle.Outer
+    property bool rounded: false
 
     signal canceled()
     signal clicked()
@@ -48,7 +49,7 @@ Item {
 
         background: Rectangle {
             id: bg
-            radius: Theme.neumorphicButtonStyle.getRadius( root.size )
+            radius: root.rounded ? height / 2 : Theme.neumorphicButtonStyle.getRadius( root.size )
             color: {
                 if(control.pressed) return Theme.neumorphicButtonStyle.getPressedBackgroundColor()
                 if(control.hovered) return Theme.neumorphicButtonStyle.getHoverBackgroundColor()

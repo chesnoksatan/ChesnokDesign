@@ -5,6 +5,7 @@
         
         <file>Pages/Buttons.qml</file>
         <file>Pages/Icons.qml</file>
+        <file>Pages/Theme.qml</file>
         
     </qresource>
 </RCC>

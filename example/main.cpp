@@ -1,21 +1,11 @@
+#include "FileListModel.h"
+
 #include <ChesnokDesignLibrary.h>
 
-#include <QDateTime>
-#include <QDebug>
 #include <QGuiApplication>
-#include <QPluginLoader>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
-#include <QQuickStyle>
 #include <QSettings>
-
-QString buildDate()
-{
-	QDateTime time;
-    time.setDate( QLocale( QLocale::C ).toDate( QString( __DATE__ ).simplified(), "MMM d yyyy" ) );
-    time.setTime( QTime::fromString( QString( __TIME__ ).simplified() ) );
-    return time.toString( "dd.MM.yyyy HH:mm" );
-}
 
 int main( int argc, char *argv[] )
 {
@@ -27,7 +17,8 @@ int main( int argc, char *argv[] )
 
     QQmlApplicationEngine engine;
 
-    ChesnokDesignLibrary::initialize( &engine, "ChesnokDesign" );
+    ChesnokDesignLibrary::initialize( &engine );
+    qmlRegisterType< FileListModel >( "FileListModel", 1, 0, "FileListModel" );
 
     const QUrl url( QStringLiteral( "qrc:/Example/main.qml" ) );
     QObject::connect(

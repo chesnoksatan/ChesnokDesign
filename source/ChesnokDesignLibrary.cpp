@@ -6,7 +6,7 @@
 #include <QDebug>
 #include <QtQml/QtQml>
 
-void ChesnokDesignLibrary::initialize( QQmlEngine *engine, const char *uri )
+void ChesnokDesignLibrary::initialize( QQmlEngine *engine )
 {
     if ( engine )
     {
@@ -18,28 +18,28 @@ void ChesnokDesignLibrary::initialize( QQmlEngine *engine, const char *uri )
 
     // clang-format off
 
-    qmlRegisterModule(uri, 1, 0);
+    qmlRegisterModule("ChesnokDesign", 1, 0);
 
     qmlRegisterUncreatableType<ApplicationTheme::Theme>( "ApplicationTheme", 1, 0, "ThemeMode", "It's enum class" );
     qmlRegisterUncreatableType<ApplicationTheme::ColorShade>( "ApplicationTheme", 1, 0, "MainColor", "It's enum class" );
 
-    qmlRegisterUncreatableType<ButtonStyle::ButtonColorStyle>( uri, 1, 0, "ButtonColorStyle", "It's enum class" );
-    qmlRegisterUncreatableType<ButtonStyle::ButtonSize>( uri, 1, 0, "ButtonSize", "It's enum class" );
+    qmlRegisterUncreatableType<ButtonStyle::ButtonColorStyle>( "ChesnokDesign", 1, 0, "ButtonColorStyle", "It's enum class" );
+    qmlRegisterUncreatableType<ButtonStyle::ButtonSize>( "ChesnokDesign", 1, 0, "ButtonSize", "It's enum class" );
 
-    qmlRegisterUncreatableType<ButtonStyle::NeumorphicButtonStyle>( uri, 1, 0, "NeumorphicButtonStyle", "It's enum class" );
+    qmlRegisterUncreatableType<ButtonStyle::NeumorphicButtonStyle>( "ChesnokDesign", 1, 0, "NeumorphicButtonStyle", "It's enum class" );
 
-    qmlRegisterSingletonType( QUrl( "qrc:/ChesnokDesign/Theme.qml" ), uri, 1, 0, "Theme" );
+    qmlRegisterSingletonType( QUrl( "qrc:/ChesnokDesign/Theme.qml" ), "ChesnokDesign", 1, 0, "Theme" );
 
-    qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Base/Button.qml" ), uri, 1, 0, "Button" );
+    qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Base/Button.qml" ), "ChesnokDesign", 1, 0, "Button" );
 
-    qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/Neumorphic/NeumorphicButton.qml" ), uri, 1, 0, "NeumorphicButton" );
-    qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/Neumorphic/NeumorphicSideBar.qml" ), uri, 1, 0, "NeumorphicSideBar" );
-    qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/Neumorphic/NeumorphicSideBarDelegate.qml" ), uri, 1, 0, "NeumorphicSideBarDelegate" );
+    qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/Neumorphic/NeumorphicButton.qml" ), "ChesnokDesign", 1, 0, "NeumorphicButton" );
+    qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/Neumorphic/NeumorphicSideBar.qml" ), "ChesnokDesign", 1, 0, "NeumorphicSideBar" );
+    qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/Neumorphic/NeumorphicSideBarDelegate.qml" ), "ChesnokDesign", 1, 0, "NeumorphicSideBarDelegate" );
 
-    qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/SideBar.qml" ), uri, 1, 0, "SideBar" );
-    qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/SideBarDelegate.qml" ), uri, 1, 0, "SideBarDelegate" );
-    qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/ButtonIcon.qml" ), uri, 1, 0, "ButtonIcon" );
-    qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/Icon.qml" ), uri, 1, 0, "Icon" );
+    qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/SideBar.qml" ), "ChesnokDesign", 1, 0, "SideBar" );
+    qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/SideBarDelegate.qml" ), "ChesnokDesign", 1, 0, "SideBarDelegate" );
+    qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/ButtonIcon.qml" ), "ChesnokDesign", 1, 0, "ButtonIcon" );
+    qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/Icon.qml" ), "ChesnokDesign", 1, 0, "Icon" );
 
     // clang-format on
 }

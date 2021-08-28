@@ -73,12 +73,10 @@ Item {
         }
     }
 
-    ButtonIcon {
+    NeumorphicButtonIcon {
         id: controlButton
-        style: ButtonColorStyle.Base
+        style: NeumorphicButtonStyle.Outer
         size: root.size
-        width: height
-        height: Theme.buttonStyle.getHeight( root.size )
         onClicked: toggleState()
         icon.group: "menu"
         icon.name: "hamburger"

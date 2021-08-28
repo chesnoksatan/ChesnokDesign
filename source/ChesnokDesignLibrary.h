@@ -5,7 +5,7 @@
 class ChesnokDesignLibrary
 {
 public:
-    static void initialize( QQmlEngine *engine, const char *uri );
+    static void initialize( QQmlEngine *engine );
 
 private:
     ChesnokDesignLibrary( const ChesnokDesignLibrary & ) = delete;

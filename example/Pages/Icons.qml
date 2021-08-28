@@ -4,28 +4,67 @@ import QtQuick.Layouts 1.4
 
 import ChesnokDesign 1.0
 
+import FileListModel 1.0
+
 Page {
+    id: page
     background: Rectangle {
         anchors.fill: parent
-        color: Theme.neumorphicBackgroundColor
+        color: Theme.backgroundColor
     }
 
     Flickable{
         anchors.fill: parent
-        contentHeight: layout.height
-        contentWidth: layout.width
+        anchors.leftMargin: 8
+        contentHeight: column.height
+        contentWidth: column.width
         boundsBehavior: Flickable.StopAtBounds
         ScrollBar.vertical: ScrollBar{}
 
-        // Add all icons
-        ColumnLayout {
-            id: layout
+        Column {
+            id: column
 
-            GridLayout {
-                GridLayout {
-                    columns: 11
-                    columnSpacing: 22
-                    rowSpacing: 22
+            Repeater {
+                model: [
+                    "arrow", "attention", "basic", "brand", "calendar", "chart",
+                    "communication", "device", "edit", "experimental", "file", "grid", "home",
+                    "media", "menu", "misc", "notification", "system", "user"
+                ]
+
+                GroupBox {
+                    id: groupBox
+                    title: groupName + " group"
+                    property var groupName: modelData
+
+                    width: 400
+
+                    GridLayout {
+                        anchors.fill: parent
+
+                        columns: 8
+
+                        Repeater {
+                            model: FileListModel {
+                                scanDir: ":/Icons/ChesnokDesign/Icons/" + groupBox.groupName + "/"
+                            }
+                            Icon {
+                                group: groupBox.groupName
+                                name: iconName
+                                color: Theme.neumorphicReverseBackgroundColor
+                                size: 35
+
+                                MouseArea{
+                                    id: area
+                                    anchors.fill: parent
+                                    hoverEnabled: true
+                                }
+                                ToolTip {
+                                    text: iconName
+                                    visible: area.containsMouse
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

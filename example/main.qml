@@ -24,34 +24,16 @@ Window {
         property alias height: window.height
     }
 
-    color: Theme.neumorphicBackgroundColor
-
-    ColumnLayout {
-        anchors.centerIn: parent
-
-        Switch {
-            onCheckedChanged: Theme.setTheme( !checked ? ThemeMode.Light : ThemeMode.Dark)
-        }
-
-        ComboBox {
-            model: [ "BlueShade", "GreenShade", "YellowShade", "OrangeShade", "RedShade", "PurpleShade"]
-            onCurrentIndexChanged: Theme.setAccentColor(currentIndex)
-            y: 40
-        }
-
-        NeumorphicButton {
-            implicitWidth: 100
-            implicitHeight: 100
-
-        }
-    }
+    color: Theme.backgroundColor
 
     NeumorphicSideBar {
         id: navigation
         anchors.top: parent.top
         anchors.bottom: parent.bottom
-        model: [    {name: "Icons", iconGroup: "file", iconName: "file_svg", url: "qrc:/Example/Pages/Icons.qml"},
-                    {name: "Buttons", iconGroup: "media", iconName: "airplay", url: "qrc:/Example/Pages/Buttons.qml"},
+        model: [
+            {name: "Icons", iconGroup: "basic", iconName: "image_alt", url: "qrc:/Example/Pages/Icons.qml"},
+            {name: "Buttons", iconGroup: "media", iconName: "airplay", url: "qrc:/Example/Pages/Buttons.qml"},
+            {name: "Theme", iconGroup: "basic", iconName: "slider_03", url: "qrc:/Example/Pages/Theme.qml"},
         ]
 
         onCurrentIndexChanged: {
