@@ -38,6 +38,12 @@ Window {
             onCurrentIndexChanged: Theme.setAccentColor(currentIndex)
             y: 40
         }
+
+        NeumorphicButton {
+            implicitWidth: 100
+            implicitHeight: 100
+
+        }
     }
 
     NeumorphicSideBar {

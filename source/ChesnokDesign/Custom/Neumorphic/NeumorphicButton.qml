@@ -9,9 +9,9 @@ import ChesnokDesign 1.0
 Item {
     id: root
 
-    property int size: ButtonSize.H48
+    property int size
     property alias text: control.text
-    property int style: NeumorphicButtonStyle.Inner
+    property int style: NeumorphicButtonStyle.Outer
 
     signal canceled()
     signal clicked()
@@ -70,7 +70,7 @@ Item {
                 verticalOffset: horizontalOffset
                 samples: Theme.neumorphicButtonStyle.getShadowSamples( root.style )
                 radius: Theme.neumorphicButtonStyle.getShadowRadius( root.style )
-                color: "#35373E"
+                color: Theme.neumorphicButtonStyle.getDarkShadowColor()
                 visible: root.style === NeumorphicButtonStyle.Inner && root.enabled
 
                 Behavior on horizontalOffset { PropertyAnimation { duration: 100 } }
@@ -90,7 +90,7 @@ Item {
         verticalOffset: horizontalOffset
         samples: Theme.neumorphicButtonStyle.getShadowSamples( root.style )
         radius: Theme.neumorphicButtonStyle.getShadowRadius( root.style )
-        color: "#35373E"
+        color: Theme.neumorphicButtonStyle.getDarkShadowColor()
         visible: root.style !== NeumorphicButtonStyle.Inner && root.enabled
 
         Behavior on horizontalOffset { PropertyAnimation { duration: 100 } }
@@ -108,7 +108,7 @@ Item {
         verticalOffset: horizontalOffset
         samples: Theme.neumorphicButtonStyle.getShadowSamples( root.style )
         radius: Theme.neumorphicButtonStyle.getShadowRadius( root.style )
-        color: "#55FAFBFF"
+        color: Theme.neumorphicButtonStyle.getLightShadowColor()
         visible: root.style !== NeumorphicButtonStyle.Inner && root.enabled
 
         Behavior on horizontalOffset { PropertyAnimation { duration: 100 } }
@@ -126,7 +126,7 @@ Item {
         verticalOffset: horizontalOffset
         samples: Theme.neumorphicButtonStyle.getShadowSamples( root.style )
         radius: Theme.neumorphicButtonStyle.getShadowRadius( root.style )
-        color: "#AAFAFBFF"
+        color: Theme.neumorphicButtonStyle.getLightShadowColor()
         visible: root.style === NeumorphicButtonStyle.Inner && root.enabled
 
         Behavior on horizontalOffset { PropertyAnimation { duration: 100 } }

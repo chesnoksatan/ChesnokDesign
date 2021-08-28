@@ -11,9 +11,11 @@ Item {
     {
         id: lightTheme
 
-        readonly property color normalBackgroundColor: Theme.neumorphicGrayScale[200]
+        readonly property color normalBackgroundColor: Theme.neumorphicBackgroundColor
         readonly property color hoverBackgroundColor: Theme.neumorphicGrayScale[300]
         readonly property color pressedBackgroundColor: Theme.neumorphicGrayScale[400]
+        readonly property color lightShadowColor: "#FAFBFF"
+        readonly property color darkShadowColor: "#35373E"
         readonly property color normalBorderColor: Theme.transparent
         readonly property color enabledBorderColor: Theme.neumorphicGrayScale[300]
         readonly property color textColor: Theme.neumorphicGrayScale[1000]
@@ -23,9 +25,11 @@ Item {
     {
         id: darkTheme
 
-        readonly property color normalBackgroundColor: Theme.neumorphicGrayScale[700]
-        readonly property color hoverBackgroundColor: Theme.neumorphicGrayScale[600]
-        readonly property color pressedBackgroundColor: Theme.neumorphicGrayScale[500]
+        readonly property color normalBackgroundColor: Theme.neumorphicBackgroundColor
+        readonly property color hoverBackgroundColor: "#4A5159"
+        readonly property color pressedBackgroundColor: "#454854"
+        readonly property color lightShadowColor: Utils.getAlphaColor( "#FAFBFF", 0.4 )
+        readonly property color darkShadowColor: "#35373E"
         readonly property color normalBorderColor: Theme.transparent
         readonly property color enabledBorderColor: Theme.neumorphicGrayScale[300]
         readonly property color textColor: Theme.neumorphicGrayScale[100]
@@ -43,8 +47,8 @@ Item {
     {
         id: shadowRadius
 
-        readonly property int outerShadowRadius: 10
-        readonly property int innerShadowRadius: 10
+        readonly property int outerShadowRadius: 7
+        readonly property int innerShadowRadius: 5
     }
 
     QtObject
@@ -59,9 +63,9 @@ Item {
     {
         id: shadowOffset
 
-        readonly property int normalShadowOffset: 3
-        readonly property int pressedShadowOffset: 8
-        readonly property int hoveredShadowOffset: 6
+        readonly property real normalShadowOffset: 1.5
+        readonly property real pressedShadowOffset: 2
+        readonly property real hoveredShadowOffset: 2.5
     }
 
     function getHeight( buttonSize )
@@ -89,6 +93,24 @@ Item {
             case ButtonSize.H40: return 20;
             case ButtonSize.H46: return 23;
             case ButtonSize.H48: return 24;
+        }
+    }
+
+    function getLightShadowColor()
+    {
+        switch ( Theme.currentTheme )
+        {
+            case ThemeMode.Light: return lightTheme.lightShadowColor
+            case ThemeMode.Dark:  return darkTheme.lightShadowColor
+        }
+    }
+
+    function getDarkShadowColor()
+    {
+        switch ( Theme.currentTheme )
+        {
+            case ThemeMode.Light: return lightTheme.darkShadowColor
+            case ThemeMode.Dark:  return darkTheme.darkShadowColor
         }
     }
 
