@@ -19,6 +19,7 @@
         <file alias="Custom/Neumorphic/NeumorphicSideBarDelegate.qml">ChesnokDesign/Custom/Neumorphic/NeumorphicSideBarDelegate.qml</file>
         <file alias="Custom/Neumorphic/NeumorphicButtonIcon.qml">ChesnokDesign/Custom/Neumorphic/NeumorphicButtonIcon.qml</file>
         <file alias="Custom/Neumorphic/NeumorphicCheckBox.qml">ChesnokDesign/Custom/Neumorphic/NeumorphicCheckBox.qml</file>
+        <file alias="Custom/Neumorphic/NeumorphicSwitch.qml">ChesnokDesign/Custom/Neumorphic/NeumorphicSwitch.qml</file>
         
         <!-- Custom components -->
         <file alias="Custom/ButtonIcon.qml">ChesnokDesign/Custom/ButtonIcon.qml</file>
