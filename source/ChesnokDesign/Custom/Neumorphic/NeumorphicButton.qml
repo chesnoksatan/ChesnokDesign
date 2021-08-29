@@ -23,7 +23,7 @@ Item {
     signal toggled()
 
     implicitWidth: 128
-    implicitHeight: Theme.buttonStyle.getHeight( root.size )
+    implicitHeight: Theme.getControlHeight( root.size )
 
     T.Button {
         id: control
@@ -40,7 +40,7 @@ Item {
         contentItem: Controls.Label {
                 id: label
                 text: control.text
-                color: Theme.neumorphicButtonStyle.getTextColor()
+                color: Theme.neumorphicStyle.getTextColor()
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
                 elide: Text.ElideRight
@@ -49,29 +49,29 @@ Item {
 
         background: Rectangle {
             id: bg
-            radius: root.rounded ? height / 2 : Theme.neumorphicButtonStyle.getRadius( root.size )
+            radius: root.rounded ? height / 2 : Theme.neumorphicStyle.getRadius( root.size )
             color: {
-                if(control.pressed) return Theme.neumorphicButtonStyle.getPressedBackgroundColor()
-                if(control.hovered) return Theme.neumorphicButtonStyle.getHoverBackgroundColor()
-                return Theme.neumorphicButtonStyle.getNormalBackgroundColor()
+                if(control.pressed) return Theme.neumorphicStyle.getPressedBackgroundColor()
+                if(control.hovered) return Theme.neumorphicStyle.getHoverBackgroundColor()
+                return Theme.neumorphicStyle.getNormalBackgroundColor()
             }
 
-            border.width: Theme.neumorphicButtonStyle.getBorderWidth( root.enabled )
-            border.color: Theme.neumorphicButtonStyle.getBorderColor( root.enabled )
+            border.width: Theme.neumorphicStyle.getBorderWidth( root.enabled )
+            border.color: Theme.neumorphicStyle.getBorderColor( root.enabled )
 
             Behavior on color {  ColorAnimation { duration: 100 } }
 
             layer.enabled: root.style === NeumorphicButtonStyle.Inner && root.enabled
             layer.effect: InnerShadow {
                 horizontalOffset: {
-                    if(control.pressed) return Theme.neumorphicButtonStyle.getPressedShadowOffset()
-                    if(control.hovered) return Theme.neumorphicButtonStyle.getHoveredShadowOffset()
-                    return Theme.neumorphicButtonStyle.getNormalShadowOffset()
+                    if(control.pressed) return Theme.neumorphicStyle.getPressedShadowOffset()
+                    if(control.hovered) return Theme.neumorphicStyle.getHoveredShadowOffset()
+                    return Theme.neumorphicStyle.getNormalShadowOffset()
                 }
                 verticalOffset: horizontalOffset
-                samples: Theme.neumorphicButtonStyle.getShadowSamples( root.style )
-                radius: Theme.neumorphicButtonStyle.getShadowRadius( root.style )
-                color: Theme.neumorphicButtonStyle.getDarkShadowColor()
+                samples: Theme.neumorphicStyle.getShadowSamples( root.style )
+                radius: Theme.neumorphicStyle.getShadowRadius( root.style )
+                color: Theme.neumorphicStyle.getDarkShadowColor()
                 visible: root.style === NeumorphicButtonStyle.Inner && root.enabled
 
                 Behavior on horizontalOffset { PropertyAnimation { duration: 100 } }
@@ -84,14 +84,14 @@ Item {
         anchors.fill: control
         source: control
         horizontalOffset: {
-            if(control.pressed) return Theme.neumorphicButtonStyle.getPressedShadowOffset()
-            if(control.hovered) return Theme.neumorphicButtonStyle.getHoveredShadowOffset()
-            return Theme.neumorphicButtonStyle.getNormalShadowOffset()
+            if(control.pressed) return Theme.neumorphicStyle.getPressedShadowOffset()
+            if(control.hovered) return Theme.neumorphicStyle.getHoveredShadowOffset()
+            return Theme.neumorphicStyle.getNormalShadowOffset()
         }
         verticalOffset: horizontalOffset
-        samples: Theme.neumorphicButtonStyle.getShadowSamples( root.style )
-        radius: Theme.neumorphicButtonStyle.getShadowRadius( root.style )
-        color: Theme.neumorphicButtonStyle.getDarkShadowColor()
+        samples: Theme.neumorphicStyle.getShadowSamples( root.style )
+        radius: Theme.neumorphicStyle.getShadowRadius( root.style )
+        color: Theme.neumorphicStyle.getDarkShadowColor()
         visible: root.style !== NeumorphicButtonStyle.Inner && root.enabled
 
         Behavior on horizontalOffset { PropertyAnimation { duration: 100 } }
@@ -102,14 +102,14 @@ Item {
         anchors.fill: control
         source: control
         horizontalOffset: {
-            if(control.pressed) return -Theme.neumorphicButtonStyle.getPressedShadowOffset()
-            if(control.hovered) return -Theme.neumorphicButtonStyle.getHoveredShadowOffset()
-            return -Theme.neumorphicButtonStyle.getNormalShadowOffset()
+            if(control.pressed) return -Theme.neumorphicStyle.getPressedShadowOffset()
+            if(control.hovered) return -Theme.neumorphicStyle.getHoveredShadowOffset()
+            return -Theme.neumorphicStyle.getNormalShadowOffset()
         }
         verticalOffset: horizontalOffset
-        samples: Theme.neumorphicButtonStyle.getShadowSamples( root.style )
-        radius: Theme.neumorphicButtonStyle.getShadowRadius( root.style )
-        color: Theme.neumorphicButtonStyle.getLightShadowColor()
+        samples: Theme.neumorphicStyle.getShadowSamples( root.style )
+        radius: Theme.neumorphicStyle.getShadowRadius( root.style )
+        color: Theme.neumorphicStyle.getLightShadowColor()
         visible: root.style !== NeumorphicButtonStyle.Inner && root.enabled
 
         Behavior on horizontalOffset { PropertyAnimation { duration: 100 } }
@@ -120,14 +120,14 @@ Item {
         anchors.fill: control
         source: control
         horizontalOffset: {
-            if(control.pressed) return -Theme.neumorphicButtonStyle.getPressedShadowOffset()
-            if(control.hovered) return -Theme.neumorphicButtonStyle.getHoveredShadowOffset()
-            return -Theme.neumorphicButtonStyle.getNormalShadowOffset()
+            if(control.pressed) return -Theme.neumorphicStyle.getPressedShadowOffset()
+            if(control.hovered) return -Theme.neumorphicStyle.getHoveredShadowOffset()
+            return -Theme.neumorphicStyle.getNormalShadowOffset()
         }
         verticalOffset: horizontalOffset
-        samples: Theme.neumorphicButtonStyle.getShadowSamples( root.style )
-        radius: Theme.neumorphicButtonStyle.getShadowRadius( root.style )
-        color: Theme.neumorphicButtonStyle.getLightShadowColor()
+        samples: Theme.neumorphicStyle.getShadowSamples( root.style )
+        radius: Theme.neumorphicStyle.getShadowRadius( root.style )
+        color: Theme.neumorphicStyle.getLightShadowColor()
         visible: root.style === NeumorphicButtonStyle.Inner && root.enabled
 
         Behavior on horizontalOffset { PropertyAnimation { duration: 100 } }

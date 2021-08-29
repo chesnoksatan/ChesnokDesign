@@ -174,29 +174,16 @@ Item {
         }
     }
 
-    function getHeight( buttonSize )
+    function getPadding( size )
     {
-        switch ( buttonSize )
+        switch ( size )
         {
-            case ButtonSize.H24: return 24;
-            case ButtonSize.H32: return 32;
-            case ButtonSize.H38: return 38;
-            case ButtonSize.H40: return 40;
-            case ButtonSize.H46: return 46;
-            case ButtonSize.H48: return 48;
-        }
-    }
-
-    function getPadding( buttonSize )
-    {
-        switch ( buttonSize )
-        {
-            case ButtonSize.H24: return 12;
-            case ButtonSize.H32: return 16;
-            case ButtonSize.H38: return 19;
-            case ButtonSize.H40: return 20;
-            case ButtonSize.H46: return 23;
-            case ButtonSize.H48: return 24;
+            case ControlSize.H24: return 12;
+            case ControlSize.H32: return 16;
+            case ControlSize.H38: return 19;
+            case ControlSize.H40: return 20;
+            case ControlSize.H46: return 23;
+            case ControlSize.H48: return 24;
         }
     }
 

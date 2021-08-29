@@ -6,6 +6,7 @@ import QtQml 2.12
 import "./Styles"
 
 import ApplicationTheme 1.0
+import ChesnokDesign 1.0
 
 Item {
     id: styleObject
@@ -20,7 +21,7 @@ Item {
     property color backgroundColor: currentTheme === ThemeMode.Light ? basic[0] : basic[1500]
     property color neumorphicBackgroundColor: currentTheme === ThemeMode.Light ? neumorphicGrayScale[200] : neumorphicGrayScale[700]
     property color neumorphicReverseBackgroundColor: currentTheme === ThemeMode.Light ? neumorphicGrayScale[700] : neumorphicGrayScale[200]
-    property color accentBackgroundColor: accent[1000]
+    readonly property color accentBackgroundColor: accent[1000]
     property color alternativeBackgroundColor: currentTheme === ThemeMode.Light ? basic[400] : basic[1400]
 
     property var accent
@@ -28,8 +29,9 @@ Item {
     readonly property var neumorphicGrayScale: neumorphic.grayScale
     readonly property color transparent: "Transparent"
 
-    property var buttonStyle: ButtonStyle {}
-    property var neumorphicButtonStyle: NeumorphicButtonStyle {}
+    readonly property Item buttonStyle: ButtonStyle {}
+    readonly property Item neumorphicStyle: NeumorphicStyle {}
+    readonly property Item checkBoxStyle: CheckBoxStyle {}
 
     QtObject
     {
@@ -187,6 +189,19 @@ Item {
             case MainColor.OrangeShade: styleObject.accent = accentColors.__OrangeColors; break;
             case MainColor.RedShade: styleObject.accent = accentColors.__RedColors; break;
             case MainColor.PurpleShade: styleObject.accent = accentColors.__PurpleColors; break;
+        }
+    }
+
+    function getControlHeight( size )
+    {
+        switch ( size )
+        {
+            case ControlSize.H24: return 24;
+            case ControlSize.H32: return 32;
+            case ControlSize.H38: return 38;
+            case ControlSize.H40: return 40;
+            case ControlSize.H46: return 46;
+            case ControlSize.H48: return 48;
         }
     }
 }

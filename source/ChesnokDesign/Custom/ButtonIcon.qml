@@ -7,14 +7,14 @@ Button {
     id: control
 
     style: ButtonColorStyle.Primary
-    size: ButtonSize.H24
+    size: ControlSize.H24
 
     property alias icon: icon
 
     Icon {
         id: icon
         anchors.centerIn: parent
-        size: Theme.buttonStyle.getHeight( control.size )
+        size: Theme.getControlHeight( control.size )
         color: Theme.buttonStyle.getIconColor( control.style )
     }
 }

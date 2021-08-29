@@ -60,25 +60,6 @@ private:
     explicit ButtonColorStyle() { }
 };
 
-class ButtonSize
-{
-    Q_GADGET
-public:
-    enum Value
-    {
-        H24,
-        H32,
-        H38,
-        H40,
-        H46,
-        H48
-    };
-    Q_ENUM( Value )
-
-private:
-    explicit ButtonSize() { }
-};
-
 class NeumorphicButtonStyle
 {
     Q_GADGET
@@ -95,6 +76,25 @@ private:
 };
 
 } // namespace ButtonStyle
+
+class ControlSize
+{
+    Q_GADGET
+public:
+    enum Value
+    {
+        H24,
+        H32,
+        H38,
+        H40,
+        H46,
+        H48
+    };
+    Q_ENUM( Value )
+
+private:
+    explicit ControlSize() { }
+};
 
 class NotificationType
 {

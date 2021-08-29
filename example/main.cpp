@@ -33,12 +33,12 @@ int main( int argc, char *argv[] )
 
     engine.load( url );
 
-    QQmlComponent component( &engine, QUrl( "qrc:/ChesnokDesign/Custom/Notification.qml" ) );
-    QObject *notification = component.create();
+    //    QQmlComponent component( &engine, QUrl( "qrc:/ChesnokDesign/Custom/Notification.qml" ) );
+    //    QObject *notification = component.create();
 
-    notification->setProperty( "title", "Don't worry" );
-    notification->setProperty( "description", "Just enjoy" );
-    notification->setProperty( "type", NotificationType::Fail );
+    //    notification->setProperty( "title", "Don't worry" );
+    //    notification->setProperty( "description", "Just enjoy" );
+    //    notification->setProperty( "type", NotificationType::Fail );
 
     return app.exec();
 }

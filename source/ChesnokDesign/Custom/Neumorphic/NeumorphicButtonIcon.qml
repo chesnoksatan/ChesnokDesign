@@ -8,17 +8,17 @@ NeumorphicButton {
     id: control
 
     style: NeumorphicButtonStyle.Outer
-    size: ButtonSize.H24
+    size: ControlSize.H24
 
     property alias icon: icon
 
     implicitWidth: implicitHeight
-    implicitHeight: Theme.buttonStyle.getHeight( control.size )
+    implicitHeight: Theme.getControlHeight( control.size )
 
     Icon {
         id: icon
         anchors.centerIn: parent
-        size: Theme.buttonStyle.getHeight( control.size )
+        size: Theme.getControlHeight( control.size )
         color: Theme.neumorphicReverseBackgroundColor
     }
 }

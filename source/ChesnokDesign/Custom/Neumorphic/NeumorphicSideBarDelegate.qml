@@ -24,25 +24,25 @@ Item {
         Rectangle {
             id: bg
             anchors.fill: parent
-            radius: Theme.neumorphicButtonStyle.getRadius( root.size )
+            radius: Theme.neumorphicStyle.getRadius( root.size )
             color: {
-                if(mouseArea.pressed) return Theme.neumorphicButtonStyle.getPressedBackgroundColor()
-                if(mouseArea.containsMouse) return Theme.neumorphicButtonStyle.getHoverBackgroundColor()
-                return Theme.neumorphicButtonStyle.getNormalBackgroundColor()
+                if(mouseArea.pressed) return Theme.neumorphicStyle.getPressedBackgroundColor()
+                if(mouseArea.containsMouse) return Theme.neumorphicStyle.getHoverBackgroundColor()
+                return Theme.neumorphicStyle.getNormalBackgroundColor()
             }
-            border.width: Theme.neumorphicButtonStyle.getBorderWidth(false)
-            border.color: Theme.neumorphicButtonStyle.getBorderColor(false)
+            border.width: Theme.neumorphicStyle.getBorderWidth(false)
+            border.color: Theme.neumorphicStyle.getBorderColor(false)
 
             layer.enabled: delegate.selected
             layer.effect: InnerShadow {
                 horizontalOffset: {
-                    if(mouseArea.pressed) return Theme.neumorphicButtonStyle.getPressedShadowOffset()
-                    if(mouseArea.containsMouse) return Theme.neumorphicButtonStyle.getHoveredShadowOffset()
-                    return Theme.neumorphicButtonStyle.getNormalShadowOffset()
+                    if(mouseArea.pressed) return Theme.neumorphicStyle.getPressedShadowOffset()
+                    if(mouseArea.containsMouse) return Theme.neumorphicStyle.getHoveredShadowOffset()
+                    return Theme.neumorphicStyle.getNormalShadowOffset()
                 }
                 verticalOffset: horizontalOffset
-                samples: Theme.neumorphicButtonStyle.getShadowSamples( NeumorphicButtonStyle.Inner )
-                radius: Theme.neumorphicButtonStyle.getShadowRadius( NeumorphicButtonStyle.Inner )
+                samples: Theme.neumorphicStyle.getShadowSamples( NeumorphicButtonStyle.Inner )
+                radius: Theme.neumorphicStyle.getShadowRadius( NeumorphicButtonStyle.Inner )
                 color: "#35373E"
 
                 Behavior on horizontalOffset { PropertyAnimation { duration: 100 } }
@@ -70,7 +70,7 @@ Item {
 
     Label {
         id: caption
-        color: Theme.neumorphicButtonStyle.getTextColor()
+        color: Theme.neumorphicStyle.getTextColor()
         text: delegate.name ? delegate.name : ""
         visible: delegate.expanded && delegate.name
         anchors.verticalCenter: parent.verticalCenter
@@ -87,13 +87,13 @@ Item {
         anchors.fill: control
         source: control
         horizontalOffset: {
-            if(mouseArea.pressed) return -Theme.neumorphicButtonStyle.getPressedShadowOffset()
-            if(mouseArea.containsMouse) return -Theme.neumorphicButtonStyle.getHoveredShadowOffset()
-            return -Theme.neumorphicButtonStyle.getNormalShadowOffset()
+            if(mouseArea.pressed) return -Theme.neumorphicStyle.getPressedShadowOffset()
+            if(mouseArea.containsMouse) return -Theme.neumorphicStyle.getHoveredShadowOffset()
+            return -Theme.neumorphicStyle.getNormalShadowOffset()
         }
         verticalOffset: horizontalOffset
-        samples: Theme.neumorphicButtonStyle.getShadowSamples( NeumorphicButtonStyle.Inner )
-        radius: Theme.neumorphicButtonStyle.getShadowRadius( NeumorphicButtonStyle.Inner )
+        samples: Theme.neumorphicStyle.getShadowSamples( NeumorphicButtonStyle.Inner )
+        radius: Theme.neumorphicStyle.getShadowRadius( NeumorphicButtonStyle.Inner )
         color: "#AAFAFBFF"
         visible: delegate.selected
 
@@ -126,22 +126,22 @@ Item {
 //        anchors.fill: parent
 
 //        color: {
-//            if(mouseArea.pressed) return Theme.neumorphicButtonStyle.getPressedBackgroundColor()
-//            if(mouseArea.hovered) return Theme.neumorphicButtonStyle.getHoverBackgroundColor()
-//            return Theme.neumorphicButtonStyle.getNormalBackgroundColor()
+//            if(mouseArea.pressed) return Theme.neumorphicStyle.getPressedBackgroundColor()
+//            if(mouseArea.hovered) return Theme.neumorphicStyle.getHoverBackgroundColor()
+//            return Theme.neumorphicStyle.getNormalBackgroundColor()
 //        }
 //        radius: 5
 
 //        layer.enabled: selected
 //        layer.effect: InnerShadow {
 //            horizontalOffset: {
-//                if(mouseArea.pressed) return Theme.neumorphicButtonStyle.getPressedShadowOffset()
-//                if(mouseArea.hovered) return Theme.neumorphicButtonStyle.getHoveredShadowOffset()
-//                return Theme.neumorphicButtonStyle.getNormalShadowOffset()
+//                if(mouseArea.pressed) return Theme.neumorphicStyle.getPressedShadowOffset()
+//                if(mouseArea.hovered) return Theme.neumorphicStyle.getHoveredShadowOffset()
+//                return Theme.neumorphicStyle.getNormalShadowOffset()
 //            }
 //            verticalOffset: horizontalOffset
-//            samples: Theme.neumorphicButtonStyle.getShadowSamples( NeumorphicButtonStyle.Inner )
-//            radius: Theme.neumorphicButtonStyle.getShadowRadius( NeumorphicButtonStyle.Inner )
+//            samples: Theme.neumorphicStyle.getShadowSamples( NeumorphicButtonStyle.Inner )
+//            radius: Theme.neumorphicStyle.getShadowRadius( NeumorphicButtonStyle.Inner )
 //            color: "#35373E"
 //            visible: selected
 
@@ -154,13 +154,13 @@ Item {
 //        anchors.fill: background
 //        source: background
 //        horizontalOffset: {
-//            if(mouseArea.pressed) return -Theme.neumorphicButtonStyle.getPressedShadowOffset()
-//            if(mouseArea.hovered) return -Theme.neumorphicButtonStyle.getHoveredShadowOffset()
-//            return -Theme.neumorphicButtonStyle.getNormalShadowOffset()
+//            if(mouseArea.pressed) return -Theme.neumorphicStyle.getPressedShadowOffset()
+//            if(mouseArea.hovered) return -Theme.neumorphicStyle.getHoveredShadowOffset()
+//            return -Theme.neumorphicStyle.getNormalShadowOffset()
 //        }
 //        verticalOffset: horizontalOffset
-//        samples: Theme.neumorphicButtonStyle.getShadowSamples( NeumorphicButtonStyle.Inner )
-//        radius: Theme.neumorphicButtonStyle.getShadowRadius( NeumorphicButtonStyle.Inner )
+//        samples: Theme.neumorphicStyle.getShadowSamples( NeumorphicButtonStyle.Inner )
+//        radius: Theme.neumorphicStyle.getShadowRadius( NeumorphicButtonStyle.Inner )
 //        color: "#AAFAFBFF"
 //        visible: selected
 
@@ -172,13 +172,13 @@ Item {
 //        anchors.fill: background
 //        source: background
 //        horizontalOffset: {
-//            if(mouseArea.pressed) return Theme.neumorphicButtonStyle.getPressedShadowOffset()
-//            if(mouseArea.hovered) return Theme.neumorphicButtonStyle.getHoveredShadowOffset()
-//            return Theme.neumorphicButtonStyle.getNormalShadowOffset()
+//            if(mouseArea.pressed) return Theme.neumorphicStyle.getPressedShadowOffset()
+//            if(mouseArea.hovered) return Theme.neumorphicStyle.getHoveredShadowOffset()
+//            return Theme.neumorphicStyle.getNormalShadowOffset()
 //        }
 //        verticalOffset: horizontalOffset
-//        samples: Theme.neumorphicButtonStyle.getShadowSamples( NeumorphicButtonStyle.Outer )
-//        radius: Theme.neumorphicButtonStyle.getShadowRadius( NeumorphicButtonStyle.Outer )
+//        samples: Theme.neumorphicStyle.getShadowSamples( NeumorphicButtonStyle.Outer )
+//        radius: Theme.neumorphicStyle.getShadowRadius( NeumorphicButtonStyle.Outer )
 //        color: "#35373E"
 //        visible: !selected
 
@@ -190,13 +190,13 @@ Item {
 //        anchors.fill: background
 //        source: background
 //        horizontalOffset: {
-//            if(mouseArea.pressed) return -Theme.neumorphicButtonStyle.getPressedShadowOffset()
-//            if(mouseArea.hovered) return -Theme.neumorphicButtonStyle.getHoveredShadowOffset()
-//            return -Theme.neumorphicButtonStyle.getNormalShadowOffset()
+//            if(mouseArea.pressed) return -Theme.neumorphicStyle.getPressedShadowOffset()
+//            if(mouseArea.hovered) return -Theme.neumorphicStyle.getHoveredShadowOffset()
+//            return -Theme.neumorphicStyle.getNormalShadowOffset()
 //        }
 //        verticalOffset: horizontalOffset
-//        samples: Theme.neumorphicButtonStyle.getShadowSamples( NeumorphicButtonStyle.Outer )
-//        radius: Theme.neumorphicButtonStyle.getShadowRadius( NeumorphicButtonStyle.Outer )
+//        samples: Theme.neumorphicStyle.getShadowSamples( NeumorphicButtonStyle.Outer )
+//        radius: Theme.neumorphicStyle.getShadowRadius( NeumorphicButtonStyle.Outer )
 //        color: "#55FAFBFF"
 //        visible: !selected
 

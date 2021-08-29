@@ -24,7 +24,7 @@ Page {
                 Repeater {
                     id: rep
                     property var buttonType: modelData
-                    model: [ButtonSize.H24, ButtonSize.H32, ButtonSize.H38, ButtonSize.H40, ButtonSize.H46, ButtonSize.H48]
+                    model: [ControlSize.H24, ControlSize.H32, ControlSize.H38, ControlSize.H40, ControlSize.H46, ControlSize.H48]
                     Button {
                         Layout.preferredWidth: 170
                         text: rep.buttonType.name
@@ -46,7 +46,7 @@ Page {
                 Repeater {
                     id: rep2
                     property var buttonType: modelData
-                    model: [ButtonSize.H24, ButtonSize.H32, ButtonSize.H38, ButtonSize.H40, ButtonSize.H46, ButtonSize.H48]
+                    model: [ControlSize.H24, ControlSize.H32, ControlSize.H38, ControlSize.H40, ControlSize.H46, ControlSize.H48]
                     NeumorphicButton {
                         Layout.preferredWidth: 170
                         text: rep2.buttonType.name

@@ -1,4 +1,5 @@
 module ChesnokDesign
 
 ButtonStyle 1.0 ButtonStyle.qml
-NeumorphicButtonStyle 1.0 NeumorphicButtonStyle.qml
+NeumorphicStyle 1.0 NeumorphicStyle.qml
+CheckBoxStyle 1.0 CheckBoxStyle.qml

@@ -9,9 +9,9 @@ import ChesnokDesign 1.0
 Item {
     id: root
 
-    property int size: ButtonSize.H48
+    property int size: ControlSize.H48
 
-    readonly property int abbreviatedWidth: Theme.buttonStyle.getHeight( root.size ) + 16
+    readonly property int abbreviatedWidth: Theme.getControlHeight( root.size ) + 16
     readonly property int expandedWidth: 300
     property int currentIndex: 0
     property var model
@@ -20,7 +20,7 @@ Item {
     z: 2
 
     property Component delegate: SideBarDelegate {
-        height: Theme.buttonStyle.getHeight( root.size )
+        height: Theme.getControlHeight( root.size )
         selected: index === root.currentIndex
         onSelect: {
             if ( root.currentIndex !== index)
@@ -69,7 +69,7 @@ Item {
         style: ButtonColorStyle.Base
         size: root.size
         width: height
-        height: Theme.buttonStyle.getHeight( root.size )
+        height: Theme.getControlHeight( root.size )
         onClicked: toggleState()
         icon.group: "menu"
         icon.name: "hamburger"

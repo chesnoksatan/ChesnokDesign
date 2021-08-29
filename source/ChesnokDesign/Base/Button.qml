@@ -9,7 +9,7 @@ T.Button {
     id: control
 
     property int style: ButtonColorStyle.Primary
-    property int size: ButtonSize.H24
+    property int size: ControlSize.H24
     property bool rounded: false
 
     leftPadding: Theme.buttonStyle.getPadding( control.size )
@@ -41,7 +41,7 @@ T.Button {
     background: Rectangle {
         id: backItem
         implicitWidth: 128
-        implicitHeight: Theme.buttonStyle.getHeight( control.size )
+        implicitHeight: Theme.getControlHeight( control.size )
         radius: control.rounded ? height / 2 : 0
         color: {
             if(control.pressed) return Theme.buttonStyle.getPressedBackgroundColor(control.style)
