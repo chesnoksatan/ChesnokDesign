@@ -11,7 +11,7 @@ Item {
 
     property int size
     property alias text: control.text
-    property int style: NeumorphicButtonStyle.Outer
+    property int style: NeumorphicButtonStyle.Inner
     property bool rounded: false
 
     signal canceled()

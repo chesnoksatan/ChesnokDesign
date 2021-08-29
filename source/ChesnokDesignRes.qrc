@@ -1,15 +1,25 @@
 <RCC>
     <qresource prefix="/ChesnokDesign">
         <file alias="Theme.qml">ChesnokDesign/Theme.qml</file>
+       
+        <!-- Styles -->
         <file alias="Styles/ButtonStyle.qml">ChesnokDesign/Styles/ButtonStyle.qml</file>
         <file alias="Styles/NeumorphicStyle.qml">ChesnokDesign/Styles/NeumorphicStyle.qml</file>
         <file alias="Styles/CheckBoxStyle.qml">ChesnokDesign/Styles/CheckBoxStyle.qml</file>
+        
+        <!-- Base components -->
         <file alias="Base/Button.qml">ChesnokDesign/Base/Button.qml</file>
         <file alias="Base/CheckBox.qml">ChesnokDesign/Base/CheckBox.qml</file>
+        
+        
+        <!-- Custom neumorphic components -->
         <file alias="Custom/Neumorphic/NeumorphicButton.qml">ChesnokDesign/Custom/Neumorphic/NeumorphicButton.qml</file>
         <file alias="Custom/Neumorphic/NeumorphicSideBar.qml">ChesnokDesign/Custom/Neumorphic/NeumorphicSideBar.qml</file>
         <file alias="Custom/Neumorphic/NeumorphicSideBarDelegate.qml">ChesnokDesign/Custom/Neumorphic/NeumorphicSideBarDelegate.qml</file>
         <file alias="Custom/Neumorphic/NeumorphicButtonIcon.qml">ChesnokDesign/Custom/Neumorphic/NeumorphicButtonIcon.qml</file>
+        <file alias="Custom/Neumorphic/NeumorphicCheckBox.qml">ChesnokDesign/Custom/Neumorphic/NeumorphicCheckBox.qml</file>
+        
+        <!-- Custom components -->
         <file alias="Custom/ButtonIcon.qml">ChesnokDesign/Custom/ButtonIcon.qml</file>
         <file alias="Custom/Icon.qml">ChesnokDesign/Custom/Icon.qml</file>
         <file alias="Custom/SideBar.qml">ChesnokDesign/Custom/SideBar.qml</file>

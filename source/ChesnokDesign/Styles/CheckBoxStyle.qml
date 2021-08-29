@@ -25,9 +25,9 @@ Item {
     {
         id: checkedColors
 
-        readonly property color normalBackgroundColor: Theme.accent[300]
-        readonly property color hoverBackgroundColor: Theme.accent[400]
-        readonly property color pressedBackgroundColor: Theme.accent[500]
+        readonly property color normalBackgroundColor: Theme.accent[400]
+        readonly property color hoverBackgroundColor: Theme.accent[500]
+        readonly property color pressedBackgroundColor: Theme.accent[600]
         readonly property color normalBorderColor: Theme.transparent
         readonly property color hoverBorderColor: Theme.transparent
         readonly property color pressedBorderColor: Theme.transparent

@@ -8,7 +8,7 @@ import ApplicationTheme 1.0
 Page {
     background: Rectangle {
         anchors.fill: parent
-        color: Theme.backgroundColor
+        color: Theme.neumorphicBackgroundColor
     }
 
     ColumnLayout {
@@ -24,5 +24,9 @@ Page {
             onCurrentIndexChanged: Theme.setAccentColor(currentIndex)
             y: 40
         }
+
+        NeumorphicCheckBox { text: "SOME TEXT" }
+        NeumorphicButton { implicitWidth: 40; implicitHeight: 40 }
+        CheckBox { text: "SOME TEXT" }
     }
 }

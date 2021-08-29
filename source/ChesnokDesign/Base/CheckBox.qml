@@ -14,11 +14,7 @@ T.CheckBox {
     implicitWidth: contentItem.implicitWidth + leftPadding + rightPadding + indicator.implicitWidth
     implicitHeight: Theme.getControlHeight( control.size )
 
-    spacing: 8
-    topPadding: 2
-    bottomPadding: 2
-    rightPadding: 2
-    leftPadding: 2
+
 
     focusPolicy: Qt.TabFocus
 
