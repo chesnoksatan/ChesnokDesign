@@ -19,6 +19,7 @@ T.Switch {
         implicitWidth: Theme.getControlHeight( control.size ) * 2.5
         implicitHeight: Theme.getControlHeight( control.size )
         radius: height / 2
+        opacity: control.enabled ? 1 : 0.48
 
         color:
         {

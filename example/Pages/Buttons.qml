@@ -57,5 +57,57 @@ Page {
                 }
             }
         }
+
+        ColumnLayout {
+            spacing: 16
+            Repeater {
+                id: rep3
+                model: [ControlSize.H24, ControlSize.H32, ControlSize.H38, ControlSize.H40, ControlSize.H46, ControlSize.H48]
+                CheckBox {
+                    size: modelData
+                    enabled: index !== 5
+                    checked: index !== 3
+                }
+            }
+        }
+
+        ColumnLayout {
+            spacing: 16
+            Repeater {
+                id: rep4
+                model: [ControlSize.H24, ControlSize.H32, ControlSize.H38, ControlSize.H40, ControlSize.H46, ControlSize.H48]
+                NeumorphicCheckBox {
+                    size: modelData
+                    enabled: index !== 5
+                    checked: index !== 3
+                }
+            }
+        }
+
+        ColumnLayout {
+            spacing: 16
+            Repeater {
+                id: rep5
+                model: [ControlSize.H24, ControlSize.H32, ControlSize.H38, ControlSize.H40, ControlSize.H46, ControlSize.H48]
+                Switch {
+                    size: modelData
+                    enabled: index !== 5
+                    checked: index !== 3
+                }
+            }
+        }
+
+        ColumnLayout {
+            spacing: 16
+            Repeater {
+                id: rep6
+                model: [ControlSize.H24, ControlSize.H32, ControlSize.H38, ControlSize.H40, ControlSize.H46, ControlSize.H48]
+                NeumorphicSwitch {
+                    size: modelData
+                    enabled: index !== 5
+                    checked: index !== 3
+                }
+            }
+        }
     }
 }

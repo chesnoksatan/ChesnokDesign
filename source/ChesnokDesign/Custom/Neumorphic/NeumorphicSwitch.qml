@@ -50,6 +50,7 @@ Item {
 
         color:
         {
+            if ( !root.enabled ) return Theme.neumorphicStyle.getNormalBackgroundColor()
             if ( root.checked )
             {
                 if ( mouseArea.pressed ) return Theme.switchStyle.getPressedBackgroundColor( root.checked )
@@ -76,11 +77,13 @@ Item {
             x: root.checked ? parent.width - width - Theme.switchStyle.getIndicatorPadding( root.size ) : Theme.switchStyle.getIndicatorPadding( root.size )
             anchors.verticalCenter: parent.verticalCenter
             radius: height / 2
+            opacity: root.enabled ? 1 : 0.48
 
             Behavior on x { PropertyAnimation { duration: 200 } }
         }
 
         DropShadow {
+            opacity: root.enabled ? 1 : 0.48
             anchors.fill: subIndicator
             source: subIndicator
             horizontalOffset: Theme.neumorphicStyle.getNormalShadowOffset()
@@ -91,6 +94,7 @@ Item {
         }
 
         DropShadow {
+            opacity: root.enabled ? 1 : 0.48
             anchors.fill: subIndicator
             source: subIndicator
             horizontalOffset: -Theme.neumorphicStyle.getNormalShadowOffset()

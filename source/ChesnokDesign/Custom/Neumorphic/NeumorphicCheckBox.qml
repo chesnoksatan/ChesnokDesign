@@ -49,6 +49,7 @@ Item {
         radius: Theme.neumorphicStyle.getRadius( root.size )
         color:
         {
+            if ( !root.enabled ) return Theme.neumorphicStyle.getNormalBackgroundColor()
             if ( root.checked )
             {
                 if ( mouseArea.pressed ) return Theme.checkBoxStyle.getPressedBackgroundColor( root.checked )
@@ -74,7 +75,11 @@ Item {
             size: Theme.getControlHeight( root.size )
             anchors.centerIn: parent
             color: Theme.neumorphicGrayScale[100]
-            opacity: root.checked ? 1 : 0
+            opacity:
+            {
+                if ( !root.enabled ) return root.checked ? 0.48 : 0
+                else return root.checked ? 1 : 0
+            }
 
             Behavior on opacity { PropertyAnimation { duration: 100 } }
 

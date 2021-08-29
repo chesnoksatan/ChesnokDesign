@@ -20,6 +20,7 @@ T.CheckBox {
         implicitWidth: Theme.getControlHeight( control.size )
         implicitHeight: Theme.getControlHeight( control.size )
         radius: 2
+        opacity: control.enabled ? 1 : 0.48
 
         color:
         {
@@ -45,7 +46,8 @@ T.CheckBox {
             size: Theme.getControlHeight( control.size )
             anchors.centerIn: parent
             color: Theme.basic[0]
-            visible: control.checked
+            opacity: control.checked ? 1 : 0
+            Behavior on opacity { PropertyAnimation { duration: 100 } }
         }
     }
 

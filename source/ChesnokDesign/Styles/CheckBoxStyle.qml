@@ -38,11 +38,11 @@ Item {
         id: uncheckedColors
 
         readonly property color normalBackgroundColor: Theme.transparent
-        readonly property color hoverBackgroundColor: Utils.getAlphaColor( Theme.basic[200], 0.2 )
-        readonly property color pressedBackgroundColor: Utils.getAlphaColor( Theme.basic[600], 0.2 )
-        readonly property color normalBorderColor: Theme.basic[400]
-        readonly property color hoverBorderColor: Utils.getAlphaColor( Theme.basic[300], 0.9 )
-        readonly property color pressedBorderColor: Utils.getAlphaColor( Theme.basic[400], 0.9 )
+        readonly property color hoverBackgroundColor: Utils.getAlphaColor( Theme.basic[600], 0.5 )
+        readonly property color pressedBackgroundColor: Utils.getAlphaColor( Theme.basic[800], 0.6 )
+        readonly property color normalBorderColor: Theme.basic[600]
+        readonly property color hoverBorderColor: Utils.getAlphaColor( Theme.basic[700], 0.9 )
+        readonly property color pressedBorderColor: Utils.getAlphaColor( Theme.basic[800], 0.9 )
     }
 
     QtObject
