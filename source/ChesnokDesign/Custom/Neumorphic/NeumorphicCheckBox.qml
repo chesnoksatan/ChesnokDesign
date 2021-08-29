@@ -22,7 +22,7 @@ Item {
     signal released()
     signal toggled()
 
-    implicitWidth: text.implicitWidth + indicator.implicitWidth
+    implicitWidth: text.text !== "" ? text.implicitWidth + indicator.implicitWidth : indicator.implicitWidth
     implicitHeight: Theme.getControlHeight( root.size )
 
     property real spacing: 8
@@ -63,6 +63,8 @@ Item {
             }
         }
 
+        Behavior on color { ColorAnimation { duration: 200 } }
+
         border.width: Theme.neumorphicStyle.getBorderWidth( root.enabled )
         border.color: Theme.neumorphicStyle.getBorderColor( root.enabled )
 
@@ -72,7 +74,18 @@ Item {
             size: Theme.getControlHeight( root.size )
             anchors.centerIn: parent
             color: Theme.neumorphicGrayScale[100]
-            visible: root.checked
+            opacity: root.checked ? 1 : 0
+
+            Behavior on opacity { PropertyAnimation { duration: 100 } }
+
+            layer.enabled: true
+            layer.effect: DropShadow {
+                horizontalOffset: 2
+                verticalOffset: 2
+                samples: Theme.neumorphicStyle.getShadowSamples( root.style )
+                radius: Theme.neumorphicStyle.getShadowRadius( root.style )
+                color: Theme.neumorphicStyle.getDarkShadowColor()
+            }
         }
 
 //        layer.enabled: root.style === NeumorphicButtonStyle.Inner && root.enabled

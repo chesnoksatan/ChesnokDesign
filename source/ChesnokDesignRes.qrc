@@ -6,11 +6,12 @@
         <file alias="Styles/ButtonStyle.qml">ChesnokDesign/Styles/ButtonStyle.qml</file>
         <file alias="Styles/NeumorphicStyle.qml">ChesnokDesign/Styles/NeumorphicStyle.qml</file>
         <file alias="Styles/CheckBoxStyle.qml">ChesnokDesign/Styles/CheckBoxStyle.qml</file>
+        <file alias="Styles/SwitchStyle.qml">ChesnokDesign/Styles/SwitchStyle.qml</file>
         
         <!-- Base components -->
         <file alias="Base/Button.qml">ChesnokDesign/Base/Button.qml</file>
         <file alias="Base/CheckBox.qml">ChesnokDesign/Base/CheckBox.qml</file>
-        
+        <file alias="Base/Switch.qml">ChesnokDesign/Base/Switch.qml</file>
         
         <!-- Custom neumorphic components -->
         <file alias="Custom/Neumorphic/NeumorphicButton.qml">ChesnokDesign/Custom/Neumorphic/NeumorphicButton.qml</file>

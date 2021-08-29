@@ -24,9 +24,5 @@ Page {
             onCurrentIndexChanged: Theme.setAccentColor(currentIndex)
             y: 40
         }
-
-        NeumorphicCheckBox { text: "SOME TEXT" }
-        NeumorphicButton { implicitWidth: 40; implicitHeight: 40 }
-        CheckBox { text: "SOME TEXT" }
     }
 }

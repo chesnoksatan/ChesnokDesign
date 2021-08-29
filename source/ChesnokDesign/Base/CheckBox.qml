@@ -11,16 +11,14 @@ T.CheckBox {
     property int size: ControlSize.H40
     checked: true
 
-    implicitWidth: contentItem.implicitWidth + leftPadding + rightPadding + indicator.implicitWidth
+    implicitWidth: control.text !== "" ? contentItem.implicitWidth + indicator.implicitWidth : indicator.implicitWidth
     implicitHeight: Theme.getControlHeight( control.size )
-
-
 
     focusPolicy: Qt.TabFocus
 
     indicator: Rectangle {
         implicitWidth: Theme.getControlHeight( control.size )
-        implicitHeight: width
+        implicitHeight: Theme.getControlHeight( control.size )
         radius: 2
 
         color:
