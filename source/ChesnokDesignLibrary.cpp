@@ -35,6 +35,7 @@ void ChesnokDesignLibrary::initialize( QQmlEngine *engine )
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Base/Button.qml" ), "ChesnokDesign", 1, 0, "Button" );
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Base/CheckBox.qml" ), "ChesnokDesign", 1, 0, "CheckBox" );
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Base/Switch.qml" ), "ChesnokDesign", 1, 0, "Switch" );
+    qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Base/RadioButton.qml" ), "ChesnokDesign", 1, 0, "RadioButton" );
 
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/Neumorphic/NeumorphicSwitch.qml" ), "ChesnokDesign", 1, 0, "NeumorphicSwitch" );
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/Neumorphic/NeumorphicCheckBox.qml" ), "ChesnokDesign", 1, 0, "NeumorphicCheckBox" );

@@ -5,11 +5,11 @@ import QtQuick.Templates 2.1 as T
 import ChesnokDesign 1.0
 
 // @disable-check M129
-T.CheckBox {
+T.RadioButton {
     id: control
 
-    property int size: ControlSize.H40
-    checked: true
+    property int size: ControlSize.H24
+    checked: false
 
     implicitWidth: control.text !== "" ? contentItem.implicitWidth + indicator.implicitWidth : indicator.implicitWidth
     implicitHeight: Theme.getControlHeight( control.size )
@@ -19,7 +19,7 @@ T.CheckBox {
     indicator: Rectangle {
         implicitWidth: Theme.getControlHeight( control.size )
         implicitHeight: Theme.getControlHeight( control.size )
-        radius: 2
+        radius: height / 2
         opacity: control.enabled ? 1 : 0.48
 
         color:
@@ -40,14 +40,14 @@ T.CheckBox {
         Behavior on color { ColorAnimation { duration: 200 } }
         Behavior on border.color { ColorAnimation { duration: 200 } }
 
-        Icon {
-            group: "basic"
-            name: "check"
-            size: Theme.getControlHeight( control.size )
+        Rectangle {
             anchors.centerIn: parent
-            color: Theme.basic[0]
             opacity: control.checked ? 1 : 0
-            Behavior on opacity { PropertyAnimation { duration: 200 } }
+            implicitWidth: Theme.getControlHeight( control.size ) * 0.5
+            implicitHeight: Theme.getControlHeight( control.size ) * 0.5
+            radius: height / 2
+
+            Behavior on opacity { OpacityAnimator { duration: 200 } }
         }
     }
 
