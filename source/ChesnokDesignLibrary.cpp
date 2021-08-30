@@ -44,6 +44,7 @@ void ChesnokDesignLibrary::initialize( QQmlEngine *engine )
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/Neumorphic/NeumorphicButton.qml" ), "ChesnokDesign", 1, 0, "NeumorphicButton" );
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/Neumorphic/NeumorphicSideBar.qml" ), "ChesnokDesign", 1, 0, "NeumorphicSideBar" );
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/Neumorphic/NeumorphicSideBarDelegate.qml" ), "ChesnokDesign", 1, 0, "NeumorphicSideBarDelegate" );
+    qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/Neumorphic/NeumorphicRadioButton.qml" ), "ChesnokDesign", 1, 0, "NeumorphicRadioButton" );
 
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/SideBar.qml" ), "ChesnokDesign", 1, 0, "SideBar" );
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/SideBarDelegate.qml" ), "ChesnokDesign", 1, 0, "SideBarDelegate" );
