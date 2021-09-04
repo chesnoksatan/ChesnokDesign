@@ -5,3 +5,4 @@ SideBarDelegate 1.0 SideBarDelegate.qml
 ButtonIcon 1.0 ButtonIcon.qml
 Icon 1.0 Icon.qml
 Notification 1.0 Notification.qml
+NumericPageIndicator 1.0 NumericPageIndicator.qml

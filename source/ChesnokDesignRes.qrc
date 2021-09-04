@@ -11,6 +11,7 @@
         <!-- Base components -->
         <file alias="Base/Button.qml">ChesnokDesign/Base/Button.qml</file>
         <file alias="Base/CheckBox.qml">ChesnokDesign/Base/CheckBox.qml</file>
+        <file alias="Base/PageIndicator.qml">ChesnokDesign/Base/PageIndicator.qml</file>
         <file alias="Base/Switch.qml">ChesnokDesign/Base/Switch.qml</file>
         <file alias="Base/RadioButton.qml">ChesnokDesign/Base/RadioButton.qml</file>
         
@@ -29,6 +30,7 @@
         <file alias="Custom/SideBar.qml">ChesnokDesign/Custom/SideBar.qml</file>
         <file alias="Custom/SideBarDelegate.qml">ChesnokDesign/Custom/SideBarDelegate.qml</file>
         <file alias="Custom/Notification.qml">ChesnokDesign/Custom/Notification.qml</file>
+        <file alias="Custom/NumericPageIndicator.qml">ChesnokDesign/Custom/NumericPageIndicator.qml</file>
     </qresource>
     <qresource prefix="/Icons">
         <file>ChesnokDesign/Icons/arrow/caret_down.svg</file>

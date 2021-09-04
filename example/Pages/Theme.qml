@@ -8,7 +8,7 @@ import ApplicationTheme 1.0
 Page {
     background: Rectangle {
         anchors.fill: parent
-        color: Theme.neumorphicBackgroundColor
+        color: Theme.backgroundColor
     }
 
     ColumnLayout {

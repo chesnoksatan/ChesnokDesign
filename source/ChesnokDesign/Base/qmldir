@@ -1,6 +1,7 @@
-module ChesnokDesign
+module ChesnokDesign 1.0
 
 Button 1.0 Button.qml
 CheckBox 1.0 CheckBox.qml
+PageIndicator 1.0 PageIndicator.qml
 Switch 1.0 Switch.qml
 RadioButton 1.0 RadioButton.qml

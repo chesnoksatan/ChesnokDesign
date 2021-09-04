@@ -8,7 +8,7 @@ import ChesnokDesign 1.0
 T.RadioButton {
     id: control
 
-    property int size: ControlSize.H40
+    property int size: ControlSize.H24
     readonly property int style: NeumorphicButtonStyle.Outer
     checked: false
 
@@ -21,7 +21,7 @@ T.RadioButton {
         implicitWidth: Theme.getControlHeight( control.size )
         implicitHeight: Theme.getControlHeight( control.size )
         radius: height / 2
-        opacity: control.enabled ? 1 : 0.48
+        opacity: control.enabled ? 1 : 0.7
 
         color:
         {
@@ -53,9 +53,14 @@ T.RadioButton {
             implicitHeight: Theme.getControlHeight( control.size ) * 0.5
             radius: height / 2
 
+            color: {
+                if ( !control.enabled ) return Theme.neumorphicStyle.getBorderColor( control.enabled )
+                return Theme.neumorphicStyle.getNormalBackgroundColor()
+            }
+
             Behavior on opacity { NumberAnimation { duration: 200 } }
 
-            layer.enabled: true
+            layer.enabled: control.enabled
             layer.effect: DropShadow {
                 horizontalOffset: 2
                 verticalOffset: 2

@@ -34,6 +34,7 @@ void ChesnokDesignLibrary::initialize( QQmlEngine *engine )
 
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Base/Button.qml" ), "ChesnokDesign", 1, 0, "Button" );
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Base/CheckBox.qml" ), "ChesnokDesign", 1, 0, "CheckBox" );
+    qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Base/PageIndicator.qml" ), "ChesnokDesign", 1, 0, "PageIndicator" );
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Base/Switch.qml" ), "ChesnokDesign", 1, 0, "Switch" );
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Base/RadioButton.qml" ), "ChesnokDesign", 1, 0, "RadioButton" );
 
@@ -51,6 +52,7 @@ void ChesnokDesignLibrary::initialize( QQmlEngine *engine )
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/ButtonIcon.qml" ), "ChesnokDesign", 1, 0, "ButtonIcon" );
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/Icon.qml" ), "ChesnokDesign", 1, 0, "Icon" );
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/Notification.qml" ), "ChesnokDesign", 1, 0, "Notification" );
+    qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/NumericPageIndicator.qml" ), "ChesnokDesign", 1, 0, "NumericPageIndicator" );
 
     // clang-format on
 }

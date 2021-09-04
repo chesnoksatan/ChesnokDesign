@@ -109,5 +109,31 @@ Page {
                 }
             }
         }
+
+        ColumnLayout {
+            spacing: 16
+            Repeater {
+                id: rep7
+                model: [ControlSize.H24, ControlSize.H32, ControlSize.H38, ControlSize.H40, ControlSize.H46, ControlSize.H48]
+                RadioButton {
+                    size: modelData
+                    enabled: index !== 5
+                    checked: index === 3
+                }
+            }
+        }
+
+        ColumnLayout {
+            spacing: 16
+            Repeater {
+                id: rep8
+                model: [ControlSize.H24, ControlSize.H32, ControlSize.H38, ControlSize.H40, ControlSize.H46, ControlSize.H48]
+                NeumorphicRadioButton {
+                    size: modelData
+                    enabled: index !== 5
+                    checked: index === 3
+                }
+            }
+        }
     }
 }
