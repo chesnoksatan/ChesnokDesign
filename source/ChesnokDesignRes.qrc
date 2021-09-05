@@ -16,6 +16,7 @@
         <file alias="Base/Switch.qml">ChesnokDesign/Base/Switch.qml</file>
         <file alias="Base/RadioButton.qml">ChesnokDesign/Base/RadioButton.qml</file>
         <file alias="Base/Label.qml">ChesnokDesign/Base/Label.qml</file>
+        <file alias="Base/BusyIndicator.qml">ChesnokDesign/Base/BusyIndicator.qml</file>
         
         <!-- Custom neumorphic components -->
         <file alias="Custom/Neumorphic/NeumorphicButton.qml">ChesnokDesign/Custom/Neumorphic/NeumorphicButton.qml</file>
@@ -33,6 +34,7 @@
         <file alias="Custom/SideBarDelegate.qml">ChesnokDesign/Custom/SideBarDelegate.qml</file>
         <file alias="Custom/Notification.qml">ChesnokDesign/Custom/Notification.qml</file>
         <file alias="Custom/NumericPageIndicator.qml">ChesnokDesign/Custom/NumericPageIndicator.qml</file>
+        <file alias="Custom/OpacityBusyIndicator.qml">ChesnokDesign/Custom/OpacityBusyIndicator.qml</file>
     </qresource>
     <qresource prefix="/Icons">
         <file>ChesnokDesign/Icons/arrow/caret_down.svg</file>
