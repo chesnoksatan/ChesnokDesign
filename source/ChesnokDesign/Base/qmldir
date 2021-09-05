@@ -7,3 +7,4 @@ Switch 1.0 Switch.qml
 RadioButton 1.0 RadioButton.qml
 Label 1.0 Label.qml
 BusyIndicator 1.0 BusyIndicator.qml
+ProgressBar 1.0 ProgressBar.qml

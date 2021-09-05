@@ -40,6 +40,7 @@ void ChesnokDesignLibrary::initialize( QQmlEngine *engine )
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Base/RadioButton.qml" ), "ChesnokDesign", 1, 0, "RadioButton" );
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Base/Label.qml" ), "ChesnokDesign", 1, 0, "Label" );
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Base/BusyIndicator.qml" ), "ChesnokDesign", 1, 0, "BusyIndicator" );
+    qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Base/ProgressBar.qml" ), "ChesnokDesign", 1, 0, "ProgressBar" );
 
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/Neumorphic/NeumorphicSwitch.qml" ), "ChesnokDesign", 1, 0, "NeumorphicSwitch" );
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/Neumorphic/NeumorphicCheckBox.qml" ), "ChesnokDesign", 1, 0, "NeumorphicCheckBox" );
