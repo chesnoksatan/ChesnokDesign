@@ -65,10 +65,7 @@ ApplicationWindow {
             anchors.centerIn: parent
             text: notification.title
             color: Theme.buttonStyle.getTextColor( ButtonColorStyle.Primary )
-
-            font.family: "Inter"
-            font.pixelSize: 17
-            font.weight: Font.Bold
+            style: LabelStyle.Header3
         }
 
         Label {
@@ -78,10 +75,7 @@ ApplicationWindow {
             anchors.horizontalCenter: parent.horizontalCenter
             text: notification.description
             color: Utils.getAlphaColor( Theme.buttonStyle.getTextColor( ButtonColorStyle.Primary ), 0.7 )
-
-            font.family: "Inter"
-            font.pixelSize: 16
-            font.weight: Font.DemiBold
+            style: LabelStyle.Paragraph3
         }
 
         ButtonIcon {

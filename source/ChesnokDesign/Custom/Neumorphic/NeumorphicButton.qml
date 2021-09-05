@@ -37,10 +37,11 @@ Item {
         onReleased: { root.released() }
         onToggled: { root.toggled() }
 
-        contentItem: Controls.Label {
+        contentItem: Label {
                 id: label
                 text: control.text
                 color: Theme.neumorphicStyle.getTextColor()
+                style: LabelStyle.Base3
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
                 elide: Text.ElideRight

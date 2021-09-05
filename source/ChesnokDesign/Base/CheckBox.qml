@@ -51,9 +51,10 @@ T.CheckBox {
         }
     }
 
-    contentItem: Controls.Label {
+    contentItem: Label {
         text: control.text
         opacity: enabled ? 1.0 : 0.48
+        style: LabelStyle.Base3
         color:
         {
             if( !control.enabled ) return Utils.getAlphaColor( Theme.checkBoxStyle.getTextColor(), 0.7 )

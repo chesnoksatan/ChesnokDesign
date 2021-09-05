@@ -33,6 +33,7 @@ Item {
     readonly property Item neumorphicStyle: NeumorphicStyle {}
     readonly property Item checkBoxStyle: CheckBoxStyle {}
     readonly property Item switchStyle: SwitchStyle {}
+    readonly property Item labelStyle: LabelStyleObject {}
 
     QtObject
     {

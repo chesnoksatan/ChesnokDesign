@@ -7,6 +7,7 @@
         <file alias="Styles/NeumorphicStyle.qml">ChesnokDesign/Styles/NeumorphicStyle.qml</file>
         <file alias="Styles/CheckBoxStyle.qml">ChesnokDesign/Styles/CheckBoxStyle.qml</file>
         <file alias="Styles/SwitchStyle.qml">ChesnokDesign/Styles/SwitchStyle.qml</file>
+        <file alias="Styles/LabelStyleObject.qml">ChesnokDesign/Styles/LabelStyleObject.qml</file>
         
         <!-- Base components -->
         <file alias="Base/Button.qml">ChesnokDesign/Base/Button.qml</file>
@@ -14,6 +15,7 @@
         <file alias="Base/PageIndicator.qml">ChesnokDesign/Base/PageIndicator.qml</file>
         <file alias="Base/Switch.qml">ChesnokDesign/Base/Switch.qml</file>
         <file alias="Base/RadioButton.qml">ChesnokDesign/Base/RadioButton.qml</file>
+        <file alias="Base/Label.qml">ChesnokDesign/Base/Label.qml</file>
         
         <!-- Custom neumorphic components -->
         <file alias="Custom/Neumorphic/NeumorphicButton.qml">ChesnokDesign/Custom/Neumorphic/NeumorphicButton.qml</file>

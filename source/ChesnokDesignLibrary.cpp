@@ -25,6 +25,7 @@ void ChesnokDesignLibrary::initialize( QQmlEngine *engine )
 
     qmlRegisterUncreatableType<ButtonStyle::ButtonColorStyle>( "ChesnokDesign", 1, 0, "ButtonColorStyle", "It's enum class" );
     qmlRegisterUncreatableType<ControlSize>( "ChesnokDesign", 1, 0, "ControlSize", "It's enum class" );
+    qmlRegisterUncreatableType<LabelStyle>( "ChesnokDesign", 1, 0, "LabelStyle", "It's enum class" );
 
     qmlRegisterUncreatableType<ButtonStyle::NeumorphicButtonStyle>( "ChesnokDesign", 1, 0, "NeumorphicButtonStyle", "It's enum class" );
 
@@ -37,6 +38,7 @@ void ChesnokDesignLibrary::initialize( QQmlEngine *engine )
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Base/PageIndicator.qml" ), "ChesnokDesign", 1, 0, "PageIndicator" );
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Base/Switch.qml" ), "ChesnokDesign", 1, 0, "Switch" );
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Base/RadioButton.qml" ), "ChesnokDesign", 1, 0, "RadioButton" );
+    qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Base/Label.qml" ), "ChesnokDesign", 1, 0, "Label" );
 
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/Neumorphic/NeumorphicSwitch.qml" ), "ChesnokDesign", 1, 0, "NeumorphicSwitch" );
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/Neumorphic/NeumorphicCheckBox.qml" ), "ChesnokDesign", 1, 0, "NeumorphicCheckBox" );

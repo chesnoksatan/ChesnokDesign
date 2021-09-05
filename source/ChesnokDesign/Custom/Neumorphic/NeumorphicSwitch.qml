@@ -29,6 +29,7 @@ Item {
 
     Controls.Label {
         id: text
+        style: LabelStyle.Base3
         color:
         {
             if( !root.enabled ) return Utils.getAlphaColor( Theme.neumorphicStyle.getTextColor(), 0.7 )

@@ -76,10 +76,7 @@ Item {
         anchors.verticalCenter: parent.verticalCenter
         anchors.left: icon.right
         anchors.leftMargin: 8
-
-        font.family: "Inter"
-        font.pixelSize: 15
-        font.weight: Font.DemiBold
+        style: LabelStyle.Paragraph3
         z: 2
     }
 

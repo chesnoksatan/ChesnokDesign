@@ -23,9 +23,19 @@ T.Button {
 
     opacity: control.enabled ? 1 : 0.48
 
-    contentItem: Controls.Label {
+    contentItem: Label {
             id: label
             text: control.text
+            style: {
+                switch ( control.style )
+                {
+                case ButtonColorStyle.Base: return LabelStyle.Base3
+                case ButtonColorStyle.Base2: return LabelStyle.Base3
+                case ButtonColorStyle.Primary: return LabelStyle.Paragraph3
+                case ButtonColorStyle.Secondary: return LabelStyle.Base4
+                }
+            }
+
             color: Theme.buttonStyle.getTextColor( control.style )
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter

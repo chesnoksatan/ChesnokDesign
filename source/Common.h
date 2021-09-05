@@ -77,6 +77,31 @@ private:
 
 } // namespace ButtonStyle
 
+class LabelStyle
+{
+    Q_GADGET
+public:
+    enum Value
+    {
+        Header1,
+        Header2,
+        Header3,
+        Header4,
+        Paragraph1,
+        Paragraph2,
+        Paragraph3,
+        Paragraph4,
+        Base1,
+        Base2,
+        Base3,
+        Base4
+    };
+    Q_ENUM( Value )
+
+private:
+    explicit LabelStyle() { }
+};
+
 class ControlSize
 {
     Q_GADGET

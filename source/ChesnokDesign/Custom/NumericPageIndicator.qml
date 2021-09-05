@@ -35,7 +35,7 @@ Item {
 
         Label {
             anchors.centerIn: parent
-            font.weight: Font.DemiBold
+            style: LabelStyle.Paragraph3
             // @disable-check M325
             opacity: index === control.currentIndex ? 1 : 0.5
             text: String(index + 1)
@@ -76,7 +76,7 @@ Item {
         }
 
         color: {
-            if ( !mouseArea.enabled ) return Theme.transparent
+            if (!mouseArea.enabled) return Theme.transparent
             if(mouseArea.pressed) return Theme.buttonStyle.getPressedBackgroundColor( ButtonColorStyle.Base2 )
             if(mouseArea.containsMouse) return Theme.buttonStyle.getHoverBackgroundColor( ButtonColorStyle.Base2 )
             return Theme.buttonStyle.getNormalBackgroundColor( ButtonColorStyle.Base2 )
@@ -106,7 +106,7 @@ Item {
         }
 
         color: {
-            if ( !mouseArea.enabled ) return Theme.transparent
+            if (!mouseArea.enabled) return Theme.transparent
             if(mouseArea.pressed) return Theme.buttonStyle.getPressedBackgroundColor( ButtonColorStyle.Base2 )
             if(mouseArea.containsMouse) return Theme.buttonStyle.getHoverBackgroundColor( ButtonColorStyle.Base2 )
             return Theme.buttonStyle.getNormalBackgroundColor( ButtonColorStyle.Base2 )
