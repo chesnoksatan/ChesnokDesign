@@ -108,7 +108,7 @@ Item {
             Rectangle {
                 width: 2
                 height: index % 4 === 0 ? control.height * 0.75 : control.height * 0.4
-                color: index % 4 === 0 ? Theme.accent[500] : Theme.basic[400]
+                color: index % 4 === 0 ? Theme.accent[500] : Utils.getAlphaColor( Theme.basic[600], 0.5 )
                 x: (control.width / (control.to - control.from)) * index * control.stepSize - width / 2
                 y: control.height - height
                 visible: index !== 0

@@ -44,6 +44,7 @@ void ChesnokDesignLibrary::initialize( QQmlEngine *engine )
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Base/TextArea.qml" ), "ChesnokDesign", 1, 0, "TextArea" );
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Base/TextEdit.qml" ), "ChesnokDesign", 1, 0, "TextEdit" );
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Base/TextField.qml" ), "ChesnokDesign", 1, 0, "TextField" );
+    qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Base/GroupBox.qml" ), "ChesnokDesign", 1, 0, "GroupBox" );
 
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/Neumorphic/NeumorphicSwitch.qml" ), "ChesnokDesign", 1, 0, "NeumorphicSwitch" );
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/Neumorphic/NeumorphicCheckBox.qml" ), "ChesnokDesign", 1, 0, "NeumorphicCheckBox" );

@@ -26,6 +26,8 @@ Page {
             id: flow
             width: page.width
 
+            spacing: Theme.buttonStyle.getPadding( ControlSize.H48 )
+
             Repeater {
                 model: [
                     "arrow", "attention", "basic", "brand", "calendar", "chart",
@@ -39,10 +41,11 @@ Page {
                     property var groupName: modelData
 
                     width: 400
-                    height: 400
+                    height: 350
 
                     GridLayout {
                         anchors.fill: parent
+                        anchors.topMargin: 24
 
                         columns: 8
 

@@ -25,11 +25,4 @@ Page {
             y: 40
         }
     }
-
-//    NumericScale {
-//        anchors.bottom: parent.bottom
-//        anchors.left: parent.left
-//        anchors.right: parent.right
-//        anchors.margins: 20
-//    }
 }

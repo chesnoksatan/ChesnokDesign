@@ -22,6 +22,7 @@
         <file alias="Base/TextArea.qml">ChesnokDesign/Base/TextArea.qml</file>
         <file alias="Base/TextEdit.qml">ChesnokDesign/Base/TextEdit.qml</file>
         <file alias="Base/TextField.qml">ChesnokDesign/Base/TextField.qml</file>
+        <file alias="Base/GroupBox.qml">ChesnokDesign/Base/GroupBox.qml</file>
         
         <!-- Custom neumorphic components -->
         <file alias="Custom/Neumorphic/NeumorphicButton.qml">ChesnokDesign/Custom/Neumorphic/NeumorphicButton.qml</file>
