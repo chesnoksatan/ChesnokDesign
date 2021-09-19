@@ -34,6 +34,7 @@ Item {
     readonly property Item checkBoxStyle: CheckBoxStyle {}
     readonly property Item switchStyle: SwitchStyle {}
     readonly property Item labelStyle: LabelStyleObject {}
+    readonly property Item inputStyle: InputStyle {}
 
     QtObject
     {

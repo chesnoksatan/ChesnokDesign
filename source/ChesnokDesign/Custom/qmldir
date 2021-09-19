@@ -7,3 +7,4 @@ Icon 1.0 Icon.qml
 Notification 1.0 Notification.qml
 NumericPageIndicator 1.0 NumericPageIndicator.qml
 OpacityBusyIndicator 1.0 OpacityBusyIndicator.qml
+NumericScale 1.0 NumericScale.qml

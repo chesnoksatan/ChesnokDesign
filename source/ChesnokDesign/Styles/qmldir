@@ -5,3 +5,4 @@ NeumorphicStyle 1.0 NeumorphicStyle.qml
 CheckBoxStyle 1.0 CheckBoxStyle.qml
 SwitchStyle 1.0 SwitchStyle.qml
 LabelStyleObject 1.0 LabelStyleObject.qml
+InputStyle 1.0 InputStyle.qml

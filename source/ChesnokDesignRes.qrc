@@ -8,6 +8,7 @@
         <file alias="Styles/CheckBoxStyle.qml">ChesnokDesign/Styles/CheckBoxStyle.qml</file>
         <file alias="Styles/SwitchStyle.qml">ChesnokDesign/Styles/SwitchStyle.qml</file>
         <file alias="Styles/LabelStyleObject.qml">ChesnokDesign/Styles/LabelStyleObject.qml</file>
+        <file alias="Styles/InputStyle.qml">ChesnokDesign/Styles/InputStyle.qml</file>
         
         <!-- Base components -->
         <file alias="Base/Button.qml">ChesnokDesign/Base/Button.qml</file>
@@ -18,6 +19,9 @@
         <file alias="Base/Label.qml">ChesnokDesign/Base/Label.qml</file>
         <file alias="Base/BusyIndicator.qml">ChesnokDesign/Base/BusyIndicator.qml</file>
         <file alias="Base/ProgressBar.qml">ChesnokDesign/Base/ProgressBar.qml</file>
+        <file alias="Base/TextArea.qml">ChesnokDesign/Base/TextArea.qml</file>
+        <file alias="Base/TextEdit.qml">ChesnokDesign/Base/TextEdit.qml</file>
+        <file alias="Base/TextField.qml">ChesnokDesign/Base/TextField.qml</file>
         
         <!-- Custom neumorphic components -->
         <file alias="Custom/Neumorphic/NeumorphicButton.qml">ChesnokDesign/Custom/Neumorphic/NeumorphicButton.qml</file>
@@ -36,6 +40,7 @@
         <file alias="Custom/Notification.qml">ChesnokDesign/Custom/Notification.qml</file>
         <file alias="Custom/NumericPageIndicator.qml">ChesnokDesign/Custom/NumericPageIndicator.qml</file>
         <file alias="Custom/OpacityBusyIndicator.qml">ChesnokDesign/Custom/OpacityBusyIndicator.qml</file>
+        <file alias="Custom/NumericScale.qml">ChesnokDesign/Custom/NumericScale.qml</file>
     </qresource>
     <qresource prefix="/Icons">
         <file>ChesnokDesign/Icons/arrow/caret_down.svg</file>

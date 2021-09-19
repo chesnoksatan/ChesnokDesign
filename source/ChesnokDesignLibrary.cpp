@@ -41,6 +41,9 @@ void ChesnokDesignLibrary::initialize( QQmlEngine *engine )
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Base/Label.qml" ), "ChesnokDesign", 1, 0, "Label" );
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Base/BusyIndicator.qml" ), "ChesnokDesign", 1, 0, "BusyIndicator" );
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Base/ProgressBar.qml" ), "ChesnokDesign", 1, 0, "ProgressBar" );
+    qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Base/TextArea.qml" ), "ChesnokDesign", 1, 0, "TextArea" );
+    qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Base/TextEdit.qml" ), "ChesnokDesign", 1, 0, "TextEdit" );
+    qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Base/TextField.qml" ), "ChesnokDesign", 1, 0, "TextField" );
 
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/Neumorphic/NeumorphicSwitch.qml" ), "ChesnokDesign", 1, 0, "NeumorphicSwitch" );
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/Neumorphic/NeumorphicCheckBox.qml" ), "ChesnokDesign", 1, 0, "NeumorphicCheckBox" );
@@ -58,6 +61,7 @@ void ChesnokDesignLibrary::initialize( QQmlEngine *engine )
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/Notification.qml" ), "ChesnokDesign", 1, 0, "Notification" );
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/NumericPageIndicator.qml" ), "ChesnokDesign", 1, 0, "NumericPageIndicator" );
     qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/OpacityBusyIndicator.qml" ), "ChesnokDesign", 1, 0, "OpacityBusyIndicator" );
+    qmlRegisterType( QUrl( "qrc:/ChesnokDesign/Custom/NumericScale.qml" ), "ChesnokDesign", 1, 0, "NumericScale" );
 
     // clang-format on
 }
